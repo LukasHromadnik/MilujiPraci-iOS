@@ -10,8 +10,6 @@ import UIKit
 
 final class TrackCollectionViewCell: UICollectionViewCell {
     
-    static let reuseIdentifier = "TrackCollectionViewCell"
-    
     var title: String? {
         get { return titleLabel.text }
         set { titleLabel.text = newValue }

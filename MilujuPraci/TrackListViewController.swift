@@ -9,17 +9,11 @@
 import UIKit
 import SnapKit
 
-protocol TrackListViewControllerDelegate: class {
-    func didSelectTrack(_ track: Track)
-}
-
 final class TrackListViewController: UIViewController {
-    
-    let numberOfColumns: CGFloat = 3
-    weak var delegate: TrackListViewControllerDelegate?
     
     private weak var collectionView: UICollectionView!
     
+    private let numberOfColumns: CGFloat = 3
     private let viewModel: TrackListViewModeling
     
     // MARK: - Initialization
@@ -43,13 +37,14 @@ final class TrackListViewController: UIViewController {
         
         let layout = UICollectionViewFlowLayout()
         layout.minimumInteritemSpacing = 10
+        layout.headerReferenceSize = CGSize(width: 0, height: 30)
         
         let itemWidth = (view.bounds.width - (numberOfColumns + 1) * layout.minimumInteritemSpacing) / numberOfColumns
         layout.itemSize = CGSize(width: itemWidth, height: itemWidth)
         layout.sectionInset = UIEdgeInsets(
             top: layout.minimumInteritemSpacing,
             left: layout.minimumInteritemSpacing,
-            bottom: 0,
+            bottom: layout.minimumInteritemSpacing,
             right: layout.minimumInteritemSpacing
         )
         
@@ -60,20 +55,26 @@ final class TrackListViewController: UIViewController {
             make.edges.equalToSuperview()
         }
         self.collectionView = collectionView
-        
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationItem.title = "Miluju práci"
+        
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.register(TrackCollectionViewCell.self, forCellWithReuseIdentifier: TrackCollectionViewCell.reuseIdentifier)
+        collectionView.register(CollectionViewSectionHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: CollectionViewSectionHeader.reuseIdentifier)
     }
 
 }
 
 extension TrackListViewController: UICollectionViewDataSource {
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return viewModel.numberOfSections
+    }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return viewModel.numberOfItems(in: section)
@@ -94,7 +95,16 @@ extension TrackListViewController: UICollectionViewDataSource {
 extension TrackListViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        delegate?.didSelectTrack(viewModel.item(for: indexPath))
+        viewModel.playTrack(at: indexPath)
     }
     
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        guard kind == UICollectionView.elementKindSectionHeader else { return UICollectionReusableView() }
+        
+        let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: CollectionViewSectionHeader.reuseIdentifier, for: indexPath) as! CollectionViewSectionHeader
+        header.title = viewModel.sections[indexPath.section].title
+        
+        return header
+    }
+
 }

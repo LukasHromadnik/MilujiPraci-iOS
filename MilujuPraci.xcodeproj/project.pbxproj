@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A31021E32230748C00B8B4A7 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31021E22230748C00B8B4A7 /* Section.swift */; };
+		A31021E5223074D100B8B4A7 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31021E4223074D100B8B4A7 /* Reusable.swift */; };
+		A31021E82230758000B8B4A7 /* CollectionViewSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31021E72230758000B8B4A7 /* CollectionViewSectionHeader.swift */; };
 		A31CA3632226684C00DB35B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31CA3622226684C00DB35B2 /* AppDelegate.swift */; };
 		A31CA3652226684C00DB35B2 /* TrackListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31CA3642226684C00DB35B2 /* TrackListViewController.swift */; };
 		A31CA36A2226684E00DB35B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A31CA3692226684E00DB35B2 /* Assets.xcassets */; };
@@ -14,7 +17,6 @@
 		A397BA9B22267E8800FEDE37 /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A397BA9A22267E8800FEDE37 /* UIColorExtensions.swift */; };
 		A397BA9D22267F2D00FEDE37 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = A397BA9C22267F2D00FEDE37 /* Track.swift */; };
 		A3F67489222FCF640088E94A /* TrackCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F67488222FCF640088E94A /* TrackCollectionViewCell.swift */; };
-		A3F6748B222FD04E0088E94A /* TracksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F6748A222FD04E0088E94A /* TracksViewController.swift */; };
 		A3F6748D222FEFEE0088E94A /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3F6748C222FEFEE0088E94A /* SnapKit.framework */; };
 		A3F674B0222FF8D40088E94A /* kurva-uz.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3F67492222FF8D20088E94A /* kurva-uz.mp3 */; };
 		A3F674B1222FF8D40088E94A /* past-vedle-pasti-pico.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3F67493222FF8D30088E94A /* past-vedle-pasti-pico.mp3 */; };
@@ -52,13 +54,13 @@
 		A3F674D7222FF8E40088E94A /* kunda-tam.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3F674D1222FF8E40088E94A /* kunda-tam.mp3 */; };
 		A3F674D8222FF8E40088E94A /* kunda-sem.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3F674D2222FF8E40088E94A /* kunda-sem.mp3 */; };
 		A3F674D9222FF8E40088E94A /* hovno.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3F674D3222FF8E40088E94A /* hovno.mp3 */; };
-		A3F674DC222FF92C0088E94A /* TrackListViewModeling.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F674DB222FF92C0088E94A /* TrackListViewModeling.swift */; };
-		A3F674DE222FF9410088E94A /* BasicTrackListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F674DD222FF9410088E94A /* BasicTrackListViewModel.swift */; };
-		A3F674E0222FF9530088E94A /* MilosTrackListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F674DF222FF9530088E94A /* MilosTrackListViewModel.swift */; };
-		A3F674E2222FF9840088E94A /* TracksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F674E1222FF9840088E94A /* TracksViewModel.swift */; };
+		A3F674DC222FF92C0088E94A /* TrackListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F674DB222FF92C0088E94A /* TrackListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A31021E22230748C00B8B4A7 /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
+		A31021E4223074D100B8B4A7 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
+		A31021E72230758000B8B4A7 /* CollectionViewSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewSectionHeader.swift; sourceTree = "<group>"; };
 		A31CA35F2226684C00DB35B2 /* MilujuPraci.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MilujuPraci.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A31CA3622226684C00DB35B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A31CA3642226684C00DB35B2 /* TrackListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackListViewController.swift; sourceTree = "<group>"; };
@@ -68,7 +70,6 @@
 		A397BA9A22267E8800FEDE37 /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
 		A397BA9C22267F2D00FEDE37 /* Track.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
 		A3F67488222FCF640088E94A /* TrackCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackCollectionViewCell.swift; sourceTree = "<group>"; };
-		A3F6748A222FD04E0088E94A /* TracksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TracksViewController.swift; sourceTree = "<group>"; };
 		A3F6748C222FEFEE0088E94A /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
 		A3F67492222FF8D20088E94A /* kurva-uz.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "kurva-uz.mp3"; path = "Resources/Sounds/Basic/kurva-uz.mp3"; sourceTree = SOURCE_ROOT; };
 		A3F67493222FF8D30088E94A /* past-vedle-pasti-pico.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "past-vedle-pasti-pico.mp3"; path = "Resources/Sounds/Basic/past-vedle-pasti-pico.mp3"; sourceTree = SOURCE_ROOT; };
@@ -106,10 +107,7 @@
 		A3F674D1222FF8E40088E94A /* kunda-tam.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "kunda-tam.mp3"; sourceTree = "<group>"; };
 		A3F674D2222FF8E40088E94A /* kunda-sem.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "kunda-sem.mp3"; sourceTree = "<group>"; };
 		A3F674D3222FF8E40088E94A /* hovno.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = hovno.mp3; sourceTree = "<group>"; };
-		A3F674DB222FF92C0088E94A /* TrackListViewModeling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackListViewModeling.swift; sourceTree = "<group>"; };
-		A3F674DD222FF9410088E94A /* BasicTrackListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicTrackListViewModel.swift; sourceTree = "<group>"; };
-		A3F674DF222FF9530088E94A /* MilosTrackListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MilosTrackListViewModel.swift; sourceTree = "<group>"; };
-		A3F674E1222FF9840088E94A /* TracksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TracksViewModel.swift; sourceTree = "<group>"; };
+		A3F674DB222FF92C0088E94A /* TrackListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackListViewModel.swift; sourceTree = "<group>"; };
 		ABAB9AADDA5040E66520BB1A /* Pods_MilujuPraci.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MilujuPraci.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -134,6 +132,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		A31021E6223074D500B8B4A7 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				A31021E4223074D100B8B4A7 /* Reusable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		A31CA3562226684C00DB35B2 = {
 			isa = PBXGroup;
 			children = (
@@ -155,9 +161,10 @@
 		A31CA3612226684C00DB35B2 /* MilujuPraci */ = {
 			isa = PBXGroup;
 			children = (
-				A3F674E3222FF9900088E94A /* Tracks */,
-				A3F674DA222FF9180088E94A /* List */,
+				A3F674DB222FF92C0088E94A /* TrackListViewModel.swift */,
+				A31CA3642226684C00DB35B2 /* TrackListViewController.swift */,
 				A3F674E6222FF9B10088E94A /* Extensions */,
+				A31021E6223074D500B8B4A7 /* Protocols */,
 				A3F674E4222FF9A70088E94A /* Views */,
 				A3F674E5222FF9AC0088E94A /* Models */,
 				A31CA3622226684C00DB35B2 /* AppDelegate.swift */,
@@ -243,29 +250,10 @@
 			path = Milos;
 			sourceTree = "<group>";
 		};
-		A3F674DA222FF9180088E94A /* List */ = {
-			isa = PBXGroup;
-			children = (
-				A3F674DD222FF9410088E94A /* BasicTrackListViewModel.swift */,
-				A3F674DF222FF9530088E94A /* MilosTrackListViewModel.swift */,
-				A3F674DB222FF92C0088E94A /* TrackListViewModeling.swift */,
-				A31CA3642226684C00DB35B2 /* TrackListViewController.swift */,
-			);
-			path = List;
-			sourceTree = "<group>";
-		};
-		A3F674E3222FF9900088E94A /* Tracks */ = {
-			isa = PBXGroup;
-			children = (
-				A3F674E1222FF9840088E94A /* TracksViewModel.swift */,
-				A3F6748A222FD04E0088E94A /* TracksViewController.swift */,
-			);
-			path = Tracks;
-			sourceTree = "<group>";
-		};
 		A3F674E4222FF9A70088E94A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A31021E72230758000B8B4A7 /* CollectionViewSectionHeader.swift */,
 				A3F67488222FCF640088E94A /* TrackCollectionViewCell.swift */,
 			);
 			path = Views;
@@ -274,6 +262,7 @@
 		A3F674E5222FF9AC0088E94A /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				A31021E22230748C00B8B4A7 /* Section.swift */,
 				A397BA9C22267F2D00FEDE37 /* Track.swift */,
 			);
 			path = Models;
@@ -418,16 +407,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A3F674E0222FF9530088E94A /* MilosTrackListViewModel.swift in Sources */,
-				A3F674DC222FF92C0088E94A /* TrackListViewModeling.swift in Sources */,
-				A3F6748B222FD04E0088E94A /* TracksViewController.swift in Sources */,
+				A3F674DC222FF92C0088E94A /* TrackListViewModel.swift in Sources */,
 				A397BA9B22267E8800FEDE37 /* UIColorExtensions.swift in Sources */,
 				A31CA3652226684C00DB35B2 /* TrackListViewController.swift in Sources */,
+				A31021E32230748C00B8B4A7 /* Section.swift in Sources */,
+				A31021E5223074D100B8B4A7 /* Reusable.swift in Sources */,
 				A31CA3632226684C00DB35B2 /* AppDelegate.swift in Sources */,
 				A3F67489222FCF640088E94A /* TrackCollectionViewCell.swift in Sources */,
 				A397BA9D22267F2D00FEDE37 /* Track.swift in Sources */,
-				A3F674E2222FF9840088E94A /* TracksViewModel.swift in Sources */,
-				A3F674DE222FF9410088E94A /* BasicTrackListViewModel.swift in Sources */,
+				A31021E82230758000B8B4A7 /* CollectionViewSectionHeader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

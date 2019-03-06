@@ -1,5 +1,5 @@
 //
-//  TrackListViewModeling.swift
+//  Section.swift
 //  MilujuPraci
 //
 //  Created by Lukáš Hromadník on 06/03/2019.
@@ -8,14 +8,14 @@
 
 import Foundation
 
-protocol TrackListViewModeling {
-    var tracks: [Track] { get }
-    var title: String { get }
+struct Section {
+    let title: String
+    let tracks: [Track]
 }
 
-extension TrackListViewModeling {
+extension Section {
     
-    func numberOfItems(in section: Int) -> Int {
+    var numberOfItems: Int {
         return tracks.count
     }
     
