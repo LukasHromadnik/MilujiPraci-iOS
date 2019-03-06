@@ -1,0 +1,50 @@
+//
+//  TrackCollectionViewCell.swift
+//  MilujuPraci
+//
+//  Created by Lukáš Hromadník on 06/03/2019.
+//  Copyright © 2019 Lukáš Hromadník. All rights reserved.
+//
+
+import UIKit
+
+final class TrackCollectionViewCell: UICollectionViewCell {
+    
+    static let reuseIdentifier = "TrackCollectionViewCell"
+    
+    var title: String? {
+        get { return titleLabel.text }
+        set { titleLabel.text = newValue }
+    }
+    
+    private weak var titleLabel: UILabel!
+    
+    // MARK: - Initialization
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        
+        setup()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    // MARK: - Components setup
+    
+    private func setup() {
+        let titleLabel = UILabel()
+        titleLabel.textColor = .white
+        titleLabel.textAlignment = .center
+        titleLabel.numberOfLines = 0
+        titleLabel.adjustsFontSizeToFitWidth = true
+        titleLabel.minimumScaleFactor = 0.5
+        contentView.addSubview(titleLabel)
+        titleLabel.snp.makeConstraints { (make) in
+            make.edges.equalToSuperview().inset(5)
+        }
+        self.titleLabel = titleLabel
+    }
+    
+}

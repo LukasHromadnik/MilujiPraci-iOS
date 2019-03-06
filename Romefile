@@ -1,0 +1,36 @@
+[Cache]
+  S3-Bucket = ios-cache
+  local = ~/Library/Caches/Rome/
+
+[RepositoryMap]
+  ACKReactiveExtensions = ACKReactiveExtensionsArgo, ACKReactiveExtensionsCore, ACKReactiveExtensionsMarshal, ACKReactiveExtensionsRealm, ACKReactiveExtensionsReachability, ACKReactiveExtensionsSDWebImage, ACKReactiveExtensionsUIKit, ACKReactiveExtensionsWebKit, ACKReactiveExtensionsAlamofireImage
+  FirebaseABTestingBinary = FirebaseABTesting, Protobuf
+  FirebaseAdMobBinary = FirebaseAdMob, GoogleMobileAds
+  FirebaseAnalyticsBinary = Firebase, FirebaseAnalytics, FirebaseCore, FirebaseCoreDiagnostics, FirebaseInstanceID, FirebaseNanoPB, GoogleToolboxForMac, nanopb
+  FirebaseAuthBinary = FirebaseAuth, GTMSessionFetcher
+  FirebaseCrashBinary = FirebaseCrash, Protobuf
+  FirebaseDatabaseBinary = FirebaseDatabase, leveldb-library
+  FirebaseDynamicLinksBinary = FirebaseDynamicLinks
+  FirebaseFirestoreBinary = BoringSSL, FirebaseFirestore, gRPC-Core, gRPC-ProtoRPC, gRPC-RxLibrary, gRPC, leveldb-library, Protobuf
+  FirebaseFunctionsBinary = FirebaseFunctions, GTMSessionFetcher
+  FirebaseInvitesBinary = FirebaseDynamicLinks, FirebaseInvites, GoogleAPIClientForREST, GoogleSignIn, GTMOAuth2, GTMSessionFetcher, Protobuf
+  FirebaseMessagingBinary = FirebaseMessaging, Protobuf
+  FirebaseMLModelInterpreterBinary = FirebaseMLCommon, FirebaseMLModelInterpreter, GTMSessionFetcher, tensorflow_lite
+  FirebaseMLVisionBarcodeModelBinary = BarcodeDetector, FirebaseMLVisionBarcodeModel
+  FirebaseMLVisionBinary = FirebaseMLCommon, FirebaseMLVision, GoogleAPIClientForREST, GoogleMobileVision, GTMSessionFetcher, Protobuf
+  FirebaseMLVisionFaceModelBinary = FaceDetector, FirebaseMLVisionFaceModel
+  FirebaseMLVisionLabelModelBinary = FirebaseMLVisionLabelModel, LabelDetector
+  FirebaseMLVisionTextModelBinary = FirebaseMLVisionTextModel, TextDetector
+  FirebasePerformanceBinary = FirebaseISASwizzler, FirebaseMethodSwizzler, FirebasePerformance, GTMSessionFetcher, Protobuf
+  FirebaseRemoteConfigBinary = FirebaseABTesting, FirebaseRemoteConfig, Protobuf
+  FirebaseStorageBinary = FirebaseStorage, GTMSessionFetcher
+  HockeySDK-iOS = HockeySDK
+  libPhoneNumber-iOS = libPhoneNumberiOS
+  lottie-ios = Lottie
+  OneSignal-iOS-SDK = OneSignal
+  Reachability.swift = Reachability
+  ReactiveCocoa = ReactiveCocoa, ReactiveMapKit
+  realm-cocoa = Realm, RealmSwift
+  Resizin-iOS-SDK = Resizin
+  TPKeyboardAvoiding = TPKeyboardAvoidingKit
+  UITextView-Placeholder = UITextView_Placeholder
