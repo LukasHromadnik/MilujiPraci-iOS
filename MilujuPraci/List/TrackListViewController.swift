@@ -9,30 +9,6 @@
 import UIKit
 import SnapKit
 
-protocol TrackListViewModeling {
-    var tracks: [Track] { get }
-}
-
-extension TrackListViewModeling {
-    
-    func numberOfItems(in section: Int) -> Int {
-        return tracks.count
-    }
-    
-    func item(for indexPath: IndexPath) -> Track {
-        return tracks[indexPath.item]
-    }
-    
-}
-
-final class BasicTrackListViewModel: TrackListViewModeling {
-    let tracks = Track.allBasic
-}
-
-final class MilosTrackListViewModel: TrackListViewModeling {
-    let tracks = Track.allMilos
-}
-
 final class TrackListViewController: UIViewController {
     
     let numberOfColumns: CGFloat = 3

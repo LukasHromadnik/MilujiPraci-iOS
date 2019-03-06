@@ -8,22 +8,6 @@
 
 import UIKit
 
-protocol TracksViewModeling {
-    var viewModels: [TrackListViewModeling] { get }
-}
-
-extension TracksViewModeling {
-    
-    func numberOfLists() -> Int {
-        return viewModels.count
-    }
-    
-}
-
-final class TracksViewModel: TracksViewModeling {
-    let viewModels: [TrackListViewModeling] = [BasicTrackListViewModel(), MilosTrackListViewModel()]
-}
-
 final class TracksViewController: UIPageViewController {
     
     private weak var pageControl: UIPageControl!
