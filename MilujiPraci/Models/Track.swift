@@ -10,11 +10,13 @@ import UIKit
 
 enum TrackType {
     case basic
+    case extra
     case milos
 
     var backgroundColor: UIColor {
         switch self {
         case .basic: return .mainGreen
+        case .extra: return .mainGreen
         case .milos: return .mainPink
         }
     }
@@ -51,22 +53,25 @@ extension Track {
         Track(title: "Past vedle pasti!", filename: "past-vedle-pasti-pico.mp3", type: .basic),
         Track(title: "To je nemožné!", filename: "to-je-pico-nemozne.mp3", type: .basic),
         Track(title: "To není normální!", filename: "to-neni-normalni-kurva.mp3", type: .basic),
-        Track(title: "To sou nervy ty pičo!", filename: "to-sou-nervy-ty-pico.mp3", type: .basic),
-        Track(title: "Abys mohl toto!", filename: "abych-mohl-toto.mp3", type: .basic),
-        Track(title: "Ani očko nenasadíš!", filename: "ani-ocko-nenasadis.mp3", type: .basic),
-        Track(title: "Banální věc!", filename: "banalni-vec.mp3", type: .basic),
-        Track(title: "Já to nejdu dělat!", filename: "ja-to-nejdu-delat.mp3", type: .basic),
-        Track(title: "Kurva už!", filename: "kurva-uz.mp3", type: .basic),
-        Track(title: "Ne, nenasadíš ho!", filename: "ne-nenasadis-ho.mp3", type: .basic),
-        Track(title: "Největší blbec na zeměkouli!", filename: "nejvetsi-blbec-na-zemekouli.mp3", type: .basic),
-        Track(title: "Nenasadím!", filename: "nenasadim.mp3", type: .basic),
-        Track(title: "Nerešitelný problém hoši!", filename: "neresitelny-problem-hosi.mp3", type: .basic),
-        Track(title: "Nevím jak!", filename: "nevim-jak.mp3", type: .basic),
-        Track(title: "Okamžitě zabít ty kurvy!", filename: "okamzite-zabit-ty-kurvy.mp3", type: .basic),
-        Track(title: "Počkej kámo!", filename: "pockej-kamo.mp3", type: .basic),
-        Track(title: "Tady musíš všechno rozdělat!", filename: "tady-musis-vsechno-rozdelat.mp3", type: .basic),
-        Track(title: "Tuto piču potřebuju utáhnout!", filename: "tuto-picu-potrebuju-utahnout.mp3", type: .basic),
-        Track(title: "Zasrané, zamrdané!", filename: "zasrane-zamrdane.mp3", type: .basic)
+        Track(title: "To sou nervy ty pičo!", filename: "to-sou-nervy-ty-pico.mp3", type: .basic)
+    ]
+
+    static let allExtra: [Track] = [
+        Track(title: "Abys mohl toto!", filename: "abych-mohl-toto.mp3", type: .extra),
+        Track(title: "Ani očko nenasadíš!", filename: "ani-ocko-nenasadis.mp3", type: .extra),
+        Track(title: "Banální věc!", filename: "banalni-vec.mp3", type: .extra),
+        Track(title: "Já to nejdu dělat!", filename: "ja-to-nejdu-delat.mp3", type: .extra),
+        Track(title: "Kurva už!", filename: "kurva-uz.mp3", type: .extra),
+        Track(title: "Ne, nenasadíš ho!", filename: "ne-nenasadis-ho.mp3", type: .extra),
+        Track(title: "Největší blbec na zeměkouli!", filename: "nejvetsi-blbec-na-zemekouli.mp3", type: .extra),
+        Track(title: "Nenasadím!", filename: "nenasadim.mp3", type: .extra),
+        Track(title: "Nerešitelný problém hoši!", filename: "neresitelny-problem-hosi.mp3", type: .extra),
+        Track(title: "Nevím jak!", filename: "nevim-jak.mp3", type: .extra),
+        Track(title: "Okamžitě zabít ty kurvy!", filename: "okamzite-zabit-ty-kurvy.mp3", type: .extra),
+        Track(title: "Počkej kámo!", filename: "pockej-kamo.mp3", type: .extra),
+        Track(title: "Tady musíš všechno rozdělat!", filename: "tady-musis-vsechno-rozdelat.mp3", type: .extra),
+        Track(title: "Tuto piču potřebuju utáhnout!", filename: "tuto-picu-potrebuju-utahnout.mp3", type: .extra),
+        Track(title: "Zasrané, zamrdané!", filename: "zasrane-zamrdane.mp3", type: .extra)
     ]
 
     static let allMilos: [Track] = [

@@ -35,6 +35,7 @@ final class TrackListViewModel: TrackListViewModeling {
 
     let sections = [
         Section(title: "Basic", tracks: Track.allBasic),
+        Section(title: "Extra", tracks: Track.allExtra),
         Section(title: "Milošek", tracks: Track.allMilos)
     ]
 
