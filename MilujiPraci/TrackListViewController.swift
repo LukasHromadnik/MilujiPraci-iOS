@@ -60,7 +60,7 @@ final class TrackListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        navigationItem.title = "Miluju práci"
+        navigationItem.title = "Miluji svoji práci"
 
         collectionView.dataSource = self
         collectionView.delegate = self

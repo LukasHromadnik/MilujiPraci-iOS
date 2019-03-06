@@ -85,7 +85,7 @@
 		A31021E22230748C00B8B4A7 /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
 		A31021E4223074D100B8B4A7 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 		A31021E72230758000B8B4A7 /* CollectionViewSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewSectionHeader.swift; sourceTree = "<group>"; };
-		A31CA35F2226684C00DB35B2 /* MilujuPraci.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MilujuPraci.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A31CA35F2226684C00DB35B2 /* MilujiPraci.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MilujiPraci.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A31CA3622226684C00DB35B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A31CA3642226684C00DB35B2 /* TrackListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackListViewController.swift; sourceTree = "<group>"; };
 		A31CA3692226684E00DB35B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -167,7 +167,7 @@
 		A31CA3562226684C00DB35B2 = {
 			isa = PBXGroup;
 			children = (
-				A31CA3612226684C00DB35B2 /* MilujuPraci */,
+				A31CA3612226684C00DB35B2 /* MilujiPraci */,
 				A3F6748E222FF8920088E94A /* Resources */,
 				A31CA3602226684C00DB35B2 /* Products */,
 				35B13B0B3D9F6D54671C0104 /* Frameworks */,
@@ -177,12 +177,12 @@
 		A31CA3602226684C00DB35B2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A31CA35F2226684C00DB35B2 /* MilujuPraci.app */,
+				A31CA35F2226684C00DB35B2 /* MilujiPraci.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		A31CA3612226684C00DB35B2 /* MilujuPraci */ = {
+		A31CA3612226684C00DB35B2 /* MilujiPraci */ = {
 			isa = PBXGroup;
 			children = (
 				A3F674DB222FF92C0088E94A /* TrackListViewModel.swift */,
@@ -194,7 +194,7 @@
 				A31CA3622226684C00DB35B2 /* AppDelegate.swift */,
 				A31CA3742226688900DB35B2 /* Supporting files */,
 			);
-			path = MilujuPraci;
+			path = MilujiPraci;
 			sourceTree = "<group>";
 		};
 		A31CA3742226688900DB35B2 /* Supporting files */ = {
@@ -303,9 +303,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A31CA35E2226684C00DB35B2 /* MilujuPraci */ = {
+		A31CA35E2226684C00DB35B2 /* MilujiPraci */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A31CA3712226684E00DB35B2 /* Build configuration list for PBXNativeTarget "MilujuPraci" */;
+			buildConfigurationList = A31CA3712226684E00DB35B2 /* Build configuration list for PBXNativeTarget "MilujiPraci" */;
 			buildPhases = (
 				A31CA35B2226684C00DB35B2 /* Sources */,
 				A31CA35C2226684C00DB35B2 /* Frameworks */,
@@ -317,9 +317,9 @@
 			dependencies = (
 				A31021EF2230777A00B8B4A7 /* PBXTargetDependency */,
 			);
-			name = MilujuPraci;
+			name = MilujiPraci;
 			productName = MilujuPraci;
-			productReference = A31CA35F2226684C00DB35B2 /* MilujuPraci.app */;
+			productReference = A31CA35F2226684C00DB35B2 /* MilujiPraci.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -340,7 +340,7 @@
 					};
 				};
 			};
-			buildConfigurationList = A31CA35A2226684C00DB35B2 /* Build configuration list for PBXProject "MilujuPraci" */;
+			buildConfigurationList = A31CA35A2226684C00DB35B2 /* Build configuration list for PBXProject "MilujiPraci" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -353,7 +353,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A31CA35E2226684C00DB35B2 /* MilujuPraci */,
+				A31CA35E2226684C00DB35B2 /* MilujiPraci */,
 				A31021E92230775A00B8B4A7 /* SwiftLint */,
 			);
 		};
@@ -632,12 +632,12 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = "$(SRCROOT)/MilujuPraci/Supporting files/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/MilujiPraci/Supporting files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = cz.ackee.enterprise.MilujuPraci;
+				PRODUCT_BUNDLE_IDENTIFIER = cz.ackee.enterprise.MilujiPraci;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "match Development cz.ackee.enterprise.*";
 				SWIFT_VERSION = 4.2;
@@ -656,12 +656,12 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = "$(SRCROOT)/MilujuPraci/Supporting files/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/MilujiPraci/Supporting files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = cz.ackee.enterprise.MilujuPraci;
+				PRODUCT_BUNDLE_IDENTIFIER = cz.ackee.enterprise.MilujiPraci;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
@@ -681,7 +681,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A31CA35A2226684C00DB35B2 /* Build configuration list for PBXProject "MilujuPraci" */ = {
+		A31CA35A2226684C00DB35B2 /* Build configuration list for PBXProject "MilujiPraci" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A31CA36F2226684E00DB35B2 /* Debug */,
@@ -690,7 +690,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A31CA3712226684E00DB35B2 /* Build configuration list for PBXNativeTarget "MilujuPraci" */ = {
+		A31CA3712226684E00DB35B2 /* Build configuration list for PBXNativeTarget "MilujiPraci" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A31CA3722226684E00DB35B2 /* Debug */,
