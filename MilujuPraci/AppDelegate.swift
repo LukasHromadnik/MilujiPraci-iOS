@@ -17,11 +17,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let viewModel = TrackListViewModel()
         let controller = TrackListViewController(viewModel: viewModel)
         let navigationController = UINavigationController(rootViewController: controller)
-        
+
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
-        
+
         return true
     }
 

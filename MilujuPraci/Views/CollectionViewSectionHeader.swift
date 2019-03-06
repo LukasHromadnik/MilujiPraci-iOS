@@ -9,31 +9,31 @@
 import UIKit
 
 final class CollectionViewSectionHeader: UICollectionReusableView {
-    
+
     var title: String? {
         get { return titleLabel.text }
         set { titleLabel.text = newValue }
     }
-    
+
     private weak var titleLabel: UILabel!
-    
+
     // MARK: - Initialization
-    
+
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
+
         setup()
     }
-    
+
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
     // MARK: - Components setup
-    
+
     private func setup() {
         backgroundColor = UIColor(white: 0, alpha: 0.1)
-        
+
         let titleLabel = UILabel()
         titleLabel.font = UIFont.preferredFont(forTextStyle: .headline)
         addSubview(titleLabel)
@@ -42,7 +42,7 @@ final class CollectionViewSectionHeader: UICollectionReusableView {
             make.leading.trailing.equalToSuperview().inset(15)
         }
         self.titleLabel = titleLabel
-        
+
         let topBorder = UIView()
         topBorder.backgroundColor = .borderColor
         addSubview(topBorder)
@@ -50,7 +50,7 @@ final class CollectionViewSectionHeader: UICollectionReusableView {
             make.leading.trailing.top.equalToSuperview()
             make.height.equalTo(1)
         }
-        
+
         let bottomBorder = UIView()
         bottomBorder.backgroundColor = .borderColor
         addSubview(bottomBorder)

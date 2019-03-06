@@ -11,7 +11,7 @@ import UIKit
 enum TrackType {
     case basic
     case milos
-    
+
     var backgroundColor: UIColor {
         switch self {
         case .basic: return .mainGreen
@@ -27,15 +27,15 @@ struct Track {
 }
 
 extension Track {
-    
+
     var fileURL: URL? {
         return Bundle.main.url(forResource: filename, withExtension: nil)
     }
-    
+
 }
 
 extension Track {
-    
+
     static let allBasic: [Track] = [
         Track(title: "Ani za kokot vole!", filename: "ani-za-kokot-vole.mp3", type: .basic),
         Track(title: "Do piče!", filename: "do-pice.mp3", type: .basic),
@@ -68,7 +68,7 @@ extension Track {
         Track(title: "Tuto piču potřebuju utáhnout!", filename: "tuto-picu-potrebuju-utahnout.mp3", type: .basic),
         Track(title: "Zasrané, zamrdané!", filename: "zasrane-zamrdane.mp3", type: .basic)
     ]
-    
+
     static let allMilos: [Track] = [
         Track(title: "Hovno", filename: "hovno.mp3", type: .milos),
         Track(title: "Zkurvila", filename: "zkurvila.mp3", type: .milos),

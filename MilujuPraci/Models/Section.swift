@@ -14,13 +14,13 @@ struct Section {
 }
 
 extension Section {
-    
+
     var numberOfItems: Int {
         return tracks.count
     }
-    
+
     func item(for indexPath: IndexPath) -> Track {
         return tracks[indexPath.item]
     }
-    
+
 }

@@ -6,6 +6,20 @@
 	objectVersion = 51;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		A31021E92230775A00B8B4A7 /* SwiftLint */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = A31021EA2230775A00B8B4A7 /* Build configuration list for PBXAggregateTarget "SwiftLint" */;
+			buildPhases = (
+				A31021ED2230776100B8B4A7 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = SwiftLint;
+			productName = SwiftLint;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		A31021E32230748C00B8B4A7 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31021E22230748C00B8B4A7 /* Section.swift */; };
 		A31021E5223074D100B8B4A7 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31021E4223074D100B8B4A7 /* Reusable.swift */; };
@@ -56,6 +70,16 @@
 		A3F674D9222FF8E40088E94A /* hovno.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3F674D3222FF8E40088E94A /* hovno.mp3 */; };
 		A3F674DC222FF92C0088E94A /* TrackListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F674DB222FF92C0088E94A /* TrackListViewModel.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A31021EE2230777A00B8B4A7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A31CA3572226684C00DB35B2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A31021E92230775A00B8B4A7;
+			remoteInfo = SwiftLint;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		A31021E22230748C00B8B4A7 /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
@@ -291,6 +315,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				A31021EF2230777A00B8B4A7 /* PBXTargetDependency */,
 			);
 			name = MilujuPraci;
 			productName = MilujuPraci;
@@ -307,6 +332,9 @@
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Lukáš Hromadník";
 				TargetAttributes = {
+					A31021E92230775A00B8B4A7 = {
+						CreatedOnToolsVersion = 10.1;
+					};
 					A31CA35E2226684C00DB35B2 = {
 						CreatedOnToolsVersion = 10.1;
 					};
@@ -326,6 +354,7 @@
 			projectRoot = "";
 			targets = (
 				A31CA35E2226684C00DB35B2 /* MilujuPraci */,
+				A31021E92230775A00B8B4A7 /* SwiftLint */,
 			);
 		};
 /* End PBXProject section */
@@ -400,6 +429,23 @@
 			shellScript = "/usr/local/bin/carthage copy-frameworks";
 			showEnvVarsInLog = 0;
 		};
+		A31021ED2230776100B8B4A7 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Pods/SwiftLint/swiftlint autocorrect\n./Pods/SwiftLint/swiftlint\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -421,6 +467,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		A31021EF2230777A00B8B4A7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A31021E92230775A00B8B4A7 /* SwiftLint */;
+			targetProxy = A31021EE2230777A00B8B4A7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		A31CA36B2226684E00DB35B2 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -433,6 +487,24 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		A31021EB2230775A00B8B4A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PXDF48X6VX;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A31021EC2230775A00B8B4A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PXDF48X6VX;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		A31CA36F2226684E00DB35B2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -600,6 +672,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		A31021EA2230775A00B8B4A7 /* Build configuration list for PBXAggregateTarget "SwiftLint" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A31021EB2230775A00B8B4A7 /* Debug */,
+				A31021EC2230775A00B8B4A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		A31CA35A2226684C00DB35B2 /* Build configuration list for PBXProject "MilujuPraci" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

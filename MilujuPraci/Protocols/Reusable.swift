@@ -11,11 +11,12 @@ import UIKit
 protocol Reusable { }
 
 extension Reusable {
-    
+
     static var reuseIdentifier: String {
+        // swiftlint:disable:next force_cast
         return NSStringFromClass(self as! AnyObject.Type)
     }
-    
+
 }
 
-extension UICollectionReusableView: Reusable { } 
+extension UICollectionReusableView: Reusable { }

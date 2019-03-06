@@ -9,28 +9,28 @@
 import UIKit
 
 final class TrackCollectionViewCell: UICollectionViewCell {
-    
+
     var title: String? {
         get { return titleLabel.text }
         set { titleLabel.text = newValue }
     }
-    
+
     private weak var titleLabel: UILabel!
-    
+
     // MARK: - Initialization
-    
+
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
+
         setup()
     }
-    
+
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
     // MARK: - Components setup
-    
+
     private func setup() {
         let titleLabel = UILabel()
         titleLabel.textColor = .white
@@ -44,5 +44,5 @@ final class TrackCollectionViewCell: UICollectionViewCell {
         }
         self.titleLabel = titleLabel
     }
-    
+
 }
