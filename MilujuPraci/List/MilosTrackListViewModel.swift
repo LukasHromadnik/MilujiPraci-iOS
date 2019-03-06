@@ -10,4 +10,5 @@ import Foundation
 
 final class MilosTrackListViewModel: TrackListViewModeling {
     let tracks = Track.allMilos
+    let title = "Miloš"
 }

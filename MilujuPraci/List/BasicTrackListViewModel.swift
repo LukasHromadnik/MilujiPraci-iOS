@@ -10,4 +10,5 @@ import Foundation
 
 final class BasicTrackListViewModel: TrackListViewModeling {
     let tracks = Track.allBasic
+    let title = "Miluju práci"
 }

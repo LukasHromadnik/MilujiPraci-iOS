@@ -41,7 +41,7 @@ final class TrackListViewController: UIViewController {
         
         let itemWidth = (view.bounds.width - (numberOfColumns + 1) * layout.minimumInteritemSpacing) / numberOfColumns
         layout.itemSize = CGSize(width: itemWidth, height: itemWidth)
-        layout.sectionInset = UIEdgeInsets(top: 0, left: layout.minimumInteritemSpacing, bottom: 0, right: layout.minimumInteritemSpacing)
+        layout.sectionInset = UIEdgeInsets(top: 10, left: layout.minimumInteritemSpacing, bottom: 0, right: layout.minimumInteritemSpacing)
         
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.backgroundColor = .clear

@@ -10,6 +10,7 @@ import Foundation
 
 protocol TrackListViewModeling {
     var tracks: [Track] { get }
+    var title: String { get }
 }
 
 extension TrackListViewModeling {

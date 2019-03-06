@@ -40,7 +40,6 @@ final class TracksViewController: UIPageViewController {
         view.addSubview(pageControl)
         pageControl.snp.makeConstraints { (make) in
             make.leading.trailing.bottom.equalToSuperview()
-            make.centerX.equalToSuperview()
         }
         self.pageControl = pageControl
     }
@@ -50,6 +49,7 @@ final class TracksViewController: UIPageViewController {
         
         childControllers = viewModel.viewModels.map(TrackListViewController.init)
         pageControl.numberOfPages = childControllers.count
+        navigationItem.title = viewModel.viewModels.first?.title
         
         delegate = self
         dataSource = self
@@ -84,11 +84,8 @@ extension TracksViewController: UIPageViewControllerDataSource {
 extension TracksViewController: UIPageViewControllerDelegate {
     
     func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
-        if previousViewControllers.first == childControllers.first {
-            pageControl.currentPage = 1
-        } else {
-            pageControl.currentPage = 0
-        }
+        pageControl.currentPage = previousViewControllers.first == childControllers.first ? 1 : 0
+        navigationItem.title = viewModel.viewModels[pageControl.currentPage].title
     }
     
 }
