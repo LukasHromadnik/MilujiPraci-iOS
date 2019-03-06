@@ -48,7 +48,7 @@ final class CollectionViewSectionHeader: UICollectionReusableView {
         addSubview(topBorder)
         topBorder.snp.makeConstraints { (make) in
             make.leading.trailing.top.equalToSuperview()
-            make.height.equalTo(1)
+            make.height.equalTo(1 / UIScreen.main.scale)
         }
 
         let bottomBorder = UIView()
@@ -56,7 +56,7 @@ final class CollectionViewSectionHeader: UICollectionReusableView {
         addSubview(bottomBorder)
         bottomBorder.snp.makeConstraints { (make) in
             make.leading.trailing.bottom.equalToSuperview()
-            make.height.equalTo(1)
+            make.height.equalTo(1 / UIScreen.main.scale)
         }
     }
 
