@@ -18,13 +18,6 @@ enum TrackType {
         case .milos: return .mainPink
         }
     }
-    
-    var folder: String {
-        switch self {
-        case .basic: return "Basic"
-        case .milos: return "Milos"
-        }
-    }
 }
 
 struct Track {

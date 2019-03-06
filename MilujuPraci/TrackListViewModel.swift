@@ -32,6 +32,7 @@ extension TrackListViewModeling {
 }
 
 final class TrackListViewModel: TrackListViewModeling {
+    
     let sections = [
         Section(title: "Basic", tracks: Track.allBasic),
         Section(title: "Milošek", tracks: Track.allMilos)
@@ -42,9 +43,13 @@ final class TrackListViewModel: TrackListViewModeling {
     // MARK: - Public API
     
     func playTrack(at indexPath: IndexPath) {
+        player?.stop()
+        
         guard let url = item(for: indexPath).fileURL else { return }
+        
         player = try? AVAudioPlayer(contentsOf: url)
         player?.prepareToPlay()
         player?.play()
     }
+
 }

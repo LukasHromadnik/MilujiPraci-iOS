@@ -59,5 +59,5 @@ final class CollectionViewSectionHeader: UICollectionReusableView {
             make.height.equalTo(1)
         }
     }
-}
 
+}
