@@ -39,7 +39,8 @@ final class TracksViewController: UIPageViewController {
         pageControl.pageIndicatorTintColor = .lightGray
         view.addSubview(pageControl)
         pageControl.snp.makeConstraints { (make) in
-            make.leading.trailing.bottom.equalToSuperview()
+            make.leading.trailing.equalToSuperview()
+            make.bottom.equalToSuperview().offset(-15)
         }
         self.pageControl = pageControl
     }
@@ -49,7 +50,8 @@ final class TracksViewController: UIPageViewController {
         
         childControllers = viewModel.viewModels.map(TrackListViewController.init)
         pageControl.numberOfPages = childControllers.count
-        navigationItem.title = viewModel.viewModels.first?.title
+        
+        updateState()
         
         delegate = self
         dataSource = self
@@ -59,24 +61,41 @@ final class TracksViewController: UIPageViewController {
         }
     }
     
+    // MARK: - Helpers
+    
+    private func updateState() {
+        navigationItem.title = viewModel.title
+        pageControl.currentPage = viewModel.selectedIndex
+    }
+    
+    private func indexOfController(_ controller: UIViewController) -> Int? {
+        for (offset, element) in childControllers.enumerated() where element == controller {
+            return offset
+        }
+        
+        return nil
+    }
+    
 }
 
 extension TracksViewController: UIPageViewControllerDataSource {
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
-        if viewController == childControllers.first {
-            return nil
-        }
+        guard
+            let index = indexOfController(viewController),
+            let newIndex = index == 0 ? nil : index - 1
+        else { return nil }
         
-        return childControllers.first
+        return childControllers[newIndex]
     }
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
-        if viewController == childControllers.first {
-            return childControllers.last
-        }
+        guard
+            let index = indexOfController(viewController),
+            let newIndex = index + 1 < childControllers.count ? index + 1 : nil
+        else { return nil }
         
-        return nil
+        return childControllers[newIndex]
     }
 
 }
@@ -84,8 +103,14 @@ extension TracksViewController: UIPageViewControllerDataSource {
 extension TracksViewController: UIPageViewControllerDelegate {
     
     func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
-        pageControl.currentPage = previousViewControllers.first == childControllers.first ? 1 : 0
-        navigationItem.title = viewModel.viewModels[pageControl.currentPage].title
+        guard
+            completed,
+            let controller = pageViewController.viewControllers?.last,
+            let index = indexOfController(controller)
+        else { return }
+        
+        viewModel.selectedIndex = index
+        updateState()
     }
     
 }

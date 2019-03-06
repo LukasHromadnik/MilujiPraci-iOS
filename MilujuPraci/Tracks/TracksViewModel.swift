@@ -8,11 +8,16 @@
 
 import Foundation
 
-protocol TracksViewModeling {
+protocol TracksViewModeling: class {
     var viewModels: [TrackListViewModeling] { get }
+    var selectedIndex: Int { get set }
 }
 
 extension TracksViewModeling {
+    
+    var title: String? {
+        return viewModels[selectedIndex].title
+    }
     
     func numberOfLists() -> Int {
         return viewModels.count
@@ -22,4 +27,6 @@ extension TracksViewModeling {
 
 final class TracksViewModel: TracksViewModeling {
     let viewModels: [TrackListViewModeling] = [BasicTrackListViewModel(), MilosTrackListViewModel()]
+
+    var selectedIndex = 0
 }
