@@ -9,9 +9,14 @@
 import UIKit
 import SnapKit
 
+protocol TrackListViewControllerDelegate: class {
+    func didSelectTrack(_ track: Track)
+}
+
 final class TrackListViewController: UIViewController {
     
     let numberOfColumns: CGFloat = 3
+    weak var delegate: TrackListViewControllerDelegate?
     
     private weak var collectionView: UICollectionView!
     
@@ -41,7 +46,12 @@ final class TrackListViewController: UIViewController {
         
         let itemWidth = (view.bounds.width - (numberOfColumns + 1) * layout.minimumInteritemSpacing) / numberOfColumns
         layout.itemSize = CGSize(width: itemWidth, height: itemWidth)
-        layout.sectionInset = UIEdgeInsets(top: 10, left: layout.minimumInteritemSpacing, bottom: 0, right: layout.minimumInteritemSpacing)
+        layout.sectionInset = UIEdgeInsets(
+            top: layout.minimumInteritemSpacing,
+            left: layout.minimumInteritemSpacing,
+            bottom: 0,
+            right: layout.minimumInteritemSpacing
+        )
         
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.backgroundColor = .clear
@@ -57,6 +67,7 @@ final class TrackListViewController: UIViewController {
         super.viewDidLoad()
         
         collectionView.dataSource = self
+        collectionView.delegate = self
         collectionView.register(TrackCollectionViewCell.self, forCellWithReuseIdentifier: TrackCollectionViewCell.reuseIdentifier)
     }
 
@@ -76,6 +87,14 @@ extension TrackListViewController: UICollectionViewDataSource {
         cell.title = item.title
         
         return cell
+    }
+    
+}
+
+extension TrackListViewController: UICollectionViewDelegate {
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        delegate?.didSelectTrack(viewModel.item(for: indexPath))
     }
     
 }

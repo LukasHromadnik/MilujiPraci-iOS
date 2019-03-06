@@ -7,10 +7,13 @@
 //
 
 import Foundation
+import AVKit
 
 protocol TracksViewModeling: class {
     var viewModels: [TrackListViewModeling] { get }
     var selectedIndex: Int { get set }
+    
+    func play(track: Track)
 }
 
 extension TracksViewModeling {
@@ -29,4 +32,13 @@ final class TracksViewModel: TracksViewModeling {
     let viewModels: [TrackListViewModeling] = [BasicTrackListViewModel(), MilosTrackListViewModel()]
 
     var selectedIndex = 0
+    
+    private var player: AVAudioPlayer?
+    
+    func play(track: Track) {
+        guard let url = track.fileURL else { return }
+        player = try? AVAudioPlayer(contentsOf: url)
+        player?.prepareToPlay()
+        player?.play()
+    }
 }

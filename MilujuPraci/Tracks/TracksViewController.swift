@@ -49,6 +49,7 @@ final class TracksViewController: UIPageViewController {
         super.viewDidLoad()
         
         childControllers = viewModel.viewModels.map(TrackListViewController.init)
+        childControllers.forEach { $0.delegate = self }
         pageControl.numberOfPages = childControllers.count
         
         updateState()
@@ -111,6 +112,14 @@ extension TracksViewController: UIPageViewControllerDelegate {
         
         viewModel.selectedIndex = index
         updateState()
+    }
+    
+}
+
+extension TracksViewController: TrackListViewControllerDelegate {
+    
+    func didSelectTrack(_ track: Track) {
+        viewModel.play(track: track)
     }
     
 }

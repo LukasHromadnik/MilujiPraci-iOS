@@ -18,12 +18,27 @@ enum TrackType {
         case .milos: return .mainPink
         }
     }
+    
+    var folder: String {
+        switch self {
+        case .basic: return "Basic"
+        case .milos: return "Milos"
+        }
+    }
 }
 
 struct Track {
     let title: String
     let filename: String
     let type: TrackType
+}
+
+extension Track {
+    
+    var fileURL: URL? {
+        return Bundle.main.url(forResource: filename, withExtension: nil)
+    }
+    
 }
 
 extension Track {
