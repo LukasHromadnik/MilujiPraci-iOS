@@ -78,8 +78,8 @@ extension Track {
         Track(title: "Hovno", filename: "hovno.mp3", type: .milos),
         Track(title: "Zkurvila", filename: "zkurvila.mp3", type: .milos),
         Track(title: "Kurev", filename: "kurev.mp3", type: .milos),
-        Track(title: "Kunda sem", filename: "kunda_sem.mp3", type: .milos),
+        Track(title: "Kunda sem", filename: "kunda-sem.mp3", type: .milos),
         Track(title: "Kunda", filename: "kunda.mp3", type: .milos),
-        Track(title: "Kunda tam", filename: "kunda_ta.mp3", type: .milos)
+        Track(title: "Kunda tam", filename: "kunda-tam.mp3", type: .milos)
     ]
 }
