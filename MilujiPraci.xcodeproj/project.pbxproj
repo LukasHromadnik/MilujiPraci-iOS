@@ -28,8 +28,9 @@
 		A31CA3652226684C00DB35B2 /* TrackListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31CA3642226684C00DB35B2 /* TrackListViewController.swift */; };
 		A31CA36A2226684E00DB35B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A31CA3692226684E00DB35B2 /* Assets.xcassets */; };
 		A31CA36D2226684E00DB35B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A31CA36B2226684E00DB35B2 /* LaunchScreen.storyboard */; };
-		A397BA9B22267E8800FEDE37 /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A397BA9A22267E8800FEDE37 /* UIColorExtensions.swift */; };
 		A397BA9D22267F2D00FEDE37 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = A397BA9C22267F2D00FEDE37 /* Track.swift */; };
+		A3B6452622797F8800C04CC1 /* UIEdgeInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B6452522797F8800C04CC1 /* UIEdgeInsets.swift */; };
+		A3B6452822797FD900C04CC1 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B6452722797FD900C04CC1 /* UIColor.swift */; };
 		A3F67489222FCF640088E94A /* TrackCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F67488222FCF640088E94A /* TrackCollectionViewCell.swift */; };
 		A3F6748D222FEFEE0088E94A /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3F6748C222FEFEE0088E94A /* SnapKit.framework */; };
 		A3F674B0222FF8D40088E94A /* kurva-uz.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3F67492222FF8D20088E94A /* kurva-uz.mp3 */; };
@@ -91,8 +92,9 @@
 		A31CA3692226684E00DB35B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A31CA36C2226684E00DB35B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A31CA36E2226684E00DB35B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A397BA9A22267E8800FEDE37 /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
 		A397BA9C22267F2D00FEDE37 /* Track.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
+		A3B6452522797F8800C04CC1 /* UIEdgeInsets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIEdgeInsets.swift; sourceTree = "<group>"; };
+		A3B6452722797FD900C04CC1 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		A3F67488222FCF640088E94A /* TrackCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackCollectionViewCell.swift; sourceTree = "<group>"; };
 		A3F6748C222FEFEE0088E94A /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
 		A3F67492222FF8D20088E94A /* kurva-uz.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "kurva-uz.mp3"; path = "Resources/Sounds/Basic/kurva-uz.mp3"; sourceTree = SOURCE_ROOT; };
@@ -295,7 +297,8 @@
 		A3F674E6222FF9B10088E94A /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				A397BA9A22267E8800FEDE37 /* UIColorExtensions.swift */,
+				A3B6452522797F8800C04CC1 /* UIEdgeInsets.swift */,
+				A3B6452722797FD900C04CC1 /* UIColor.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -455,11 +458,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				A3F674DC222FF92C0088E94A /* TrackListViewModel.swift in Sources */,
-				A397BA9B22267E8800FEDE37 /* UIColorExtensions.swift in Sources */,
 				A31CA3652226684C00DB35B2 /* TrackListViewController.swift in Sources */,
 				A31021E32230748C00B8B4A7 /* Section.swift in Sources */,
 				A31021E5223074D100B8B4A7 /* Reusable.swift in Sources */,
 				A31CA3632226684C00DB35B2 /* AppDelegate.swift in Sources */,
+				A3B6452622797F8800C04CC1 /* UIEdgeInsets.swift in Sources */,
+				A3B6452822797FD900C04CC1 /* UIColor.swift in Sources */,
 				A3F67489222FCF640088E94A /* TrackCollectionViewCell.swift in Sources */,
 				A397BA9D22267F2D00FEDE37 /* Track.swift in Sources */,
 				A31021E82230758000B8B4A7 /* CollectionViewSectionHeader.swift in Sources */,

@@ -1,5 +1,5 @@
 //
-//  UIColorExtensions.swift
+//  UIColor.swift
 //  MilujuPraci
 //
 //  Created by Lukáš Hromadník on 27/02/2019.

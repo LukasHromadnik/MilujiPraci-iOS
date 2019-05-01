@@ -9,11 +9,20 @@
 import UIKit
 import SnapKit
 
+private enum Constants {
+    static let numberOfColumns: CGFloat = 3
+    static let minimumInteritemSpacing: CGFloat = 10
+    static let headerHeight = 30
+
+    static func itemWidth(fitting width: CGFloat) -> CGFloat {
+        return (width - (numberOfColumns + 1) * minimumInteritemSpacing) / numberOfColumns
+    }
+}
+
 final class TrackListViewController: UIViewController {
 
     private weak var collectionView: UICollectionView!
 
-    private let numberOfColumns: CGFloat = 3
     private let viewModel: TrackListViewModeling
 
     // MARK: - Initialization
@@ -36,17 +45,12 @@ final class TrackListViewController: UIViewController {
         view.backgroundColor = .white
 
         let layout = UICollectionViewFlowLayout()
-        layout.minimumInteritemSpacing = 10
-        layout.headerReferenceSize = CGSize(width: 0, height: 30)
+        layout.minimumInteritemSpacing = Constants.minimumInteritemSpacing
+        layout.headerReferenceSize = CGSize(width: 0, height: Constants.headerHeight)
+        layout.sectionInset = UIEdgeInsets(size: layout.minimumInteritemSpacing)
 
-        let itemWidth = (view.bounds.width - (numberOfColumns + 1) * layout.minimumInteritemSpacing) / numberOfColumns
+        let itemWidth = Constants.itemWidth(fitting: view.bounds.width)
         layout.itemSize = CGSize(width: itemWidth, height: itemWidth)
-        layout.sectionInset = UIEdgeInsets(
-            top: layout.minimumInteritemSpacing,
-            left: layout.minimumInteritemSpacing,
-            bottom: layout.minimumInteritemSpacing,
-            right: layout.minimumInteritemSpacing
-        )
 
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.backgroundColor = .clear
