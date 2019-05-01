@@ -86,7 +86,7 @@ extension TrackListViewController: UICollectionViewDataSource {
         let item = viewModel.item(for: indexPath)
 
         let cell: TrackCollectionViewCell = collectionView.dequeueCell(for: indexPath)
-        cell.backgroundColor = item.type.backgroundColor
+        cell.backgroundColor = viewModel.sections[indexPath.section].backgroundColor
         cell.title = item.title
 
         return cell
@@ -98,6 +98,7 @@ extension TrackListViewController: UICollectionViewDelegate {
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         viewModel.playTrack(at: indexPath)
+        collectionView.deselectItem(at: indexPath, animated: true)
     }
 
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {

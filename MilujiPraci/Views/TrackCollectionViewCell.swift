@@ -15,6 +15,16 @@ final class TrackCollectionViewCell: UICollectionViewCell {
         set { titleLabel.text = newValue }
     }
 
+    override var isSelected: Bool {
+        didSet {
+            if isSelected {
+                backgroundColor = backgroundColor?.withAlphaComponent(0.7)
+            } else {
+                backgroundColor = backgroundColor?.withAlphaComponent(1.3)
+            }
+        }
+    }
+
     private weak var titleLabel: UILabel!
 
     // MARK: - Initialization

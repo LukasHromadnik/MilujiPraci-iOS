@@ -22,22 +22,18 @@ extension TrackListViewModeling {
     }
 
     func numberOfItems(in section: Int) -> Int {
-        return sections[section].numberOfItems
+        return DataSource.tracks(for: sections[section]).count
     }
 
     func item(for indexPath: IndexPath) -> Track {
-        return sections[indexPath.section].item(for: indexPath)
+        return DataSource.tracks(for: sections[indexPath.section])[indexPath.row]
     }
 
 }
 
 final class TrackListViewModel: TrackListViewModeling {
 
-    let sections = [
-        Section(title: "Basic", tracks: Track.allBasic),
-        Section(title: "Extra", tracks: Track.allExtra),
-        Section(title: "Milošek", tracks: Track.allMilos)
-    ]
+    let sections = DataSource.sections
 
     private var player: AVAudioPlayer?
 

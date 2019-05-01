@@ -6,21 +6,26 @@
 //  Copyright © 2019 Lukáš Hromadník. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
-struct Section {
-    let title: String
-    let tracks: [Track]
-}
+enum Section {
+    case basic
+    case extra
+    case milos
 
-extension Section {
-
-    var numberOfItems: Int {
-        return tracks.count
+    var title: String {
+        switch self {
+        case .basic: return "Basic"
+        case .extra: return "Extra"
+        case .milos: return "Miloš Zeman"
+        }
     }
 
-    func item(for indexPath: IndexPath) -> Track {
-        return tracks[indexPath.item]
+    var backgroundColor: UIColor {
+        switch self {
+        case .basic: return .mainGreen
+        case .extra: return .mainGreen
+        case .milos: return .mainPink
+        }
     }
-
 }
