@@ -64,8 +64,6 @@ final class TrackListViewController: UIViewController {
 
         collectionView.dataSource = self
         collectionView.delegate = self
-        collectionView.register(TrackCollectionViewCell.self, forCellWithReuseIdentifier: TrackCollectionViewCell.reuseIdentifier)
-        collectionView.register(CollectionViewSectionHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: CollectionViewSectionHeader.reuseIdentifier)
     }
 
 }
@@ -83,8 +81,7 @@ extension TrackListViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let item = viewModel.item(for: indexPath)
 
-        // swiftlint:disable:next force_cast
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TrackCollectionViewCell.reuseIdentifier, for: indexPath) as! TrackCollectionViewCell
+        let cell: TrackCollectionViewCell = collectionView.dequeueCell(for: indexPath)
         cell.backgroundColor = item.type.backgroundColor
         cell.title = item.title
 
@@ -102,8 +99,7 @@ extension TrackListViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         guard kind == UICollectionView.elementKindSectionHeader else { return UICollectionReusableView() }
 
-        // swiftlint:disable:next force_cast
-        let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: CollectionViewSectionHeader.reuseIdentifier, for: indexPath) as! CollectionViewSectionHeader
+        let header: CollectionViewSectionHeader = collectionView.dequeueHeader(for: indexPath)
         header.title = viewModel.sections[indexPath.section].title
 
         return header
