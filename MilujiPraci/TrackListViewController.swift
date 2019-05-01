@@ -101,7 +101,7 @@ extension TrackListViewController: UICollectionViewDelegate {
     }
 
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        guard kind == UICollectionView.elementKindSectionHeader else { return UICollectionReusableView() }
+        guard kind == UICollectionView.elementKindSectionHeader else { assertionFailure(); return UICollectionReusableView() }
 
         let header: CollectionViewSectionHeader = collectionView.dequeueHeader(for: indexPath)
         header.title = viewModel.sections[indexPath.section].title
