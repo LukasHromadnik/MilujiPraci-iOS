@@ -75,7 +75,7 @@ final class TrackListViewModel: NSObject, TrackListViewModeling {
             try? audioSession.setCategory(.playback)
             try? audioSession.setActive(true)
         }
-        timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { [weak self] _ in
+        timer = Timer.scheduledTimer(withTimeInterval: 0.01, repeats: true) { [weak self] _ in
             let currentTime = self?.player?.currentTime ?? 0
             let totalTime = self?.player?.duration ?? 0
             self?.onDurationChange?(currentTime / totalTime)
@@ -91,6 +91,7 @@ final class TrackListViewModel: NSObject, TrackListViewModeling {
 
     func selectTrack(at indexPath: IndexPath) {
         selectedTrack = item(for: indexPath)
+        stop()
     }
 }
 
