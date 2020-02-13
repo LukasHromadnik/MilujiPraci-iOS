@@ -21,6 +21,7 @@ private enum Constants {
 
 final class TrackListViewController: UIViewController {
     private weak var collectionView: UICollectionView!
+    private weak var toolbar: UIToolbar!
 
     private let viewModel: TrackListViewModeling
 
@@ -58,6 +59,15 @@ final class TrackListViewController: UIViewController {
             make.edges.equalToSuperview()
         }
         self.collectionView = collectionView
+
+        let toolbar = UIToolbar()
+        view.addSubview(toolbar)
+        toolbar.snp.makeConstraints { (make) in
+            make.leading.trailing.bottom.equalTo(view.safeAreaLayoutGuide)
+        }
+        self.toolbar = toolbar
+
+        updateToolbar(isPlaying: false)
     }
 
     override func viewDidLoad() {
@@ -67,6 +77,61 @@ final class TrackListViewController: UIViewController {
 
         collectionView.dataSource = self
         collectionView.delegate = self
+
+        viewModel.onFinish = { [weak self] in self?.updateToolbar(isPlaying: false) }
+    }
+
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+
+        let insets = UIEdgeInsets(top: 0, left: 0, bottom: toolbar.bounds.size.height, right: 0)
+        collectionView.contentInset = insets
+        collectionView.scrollIndicatorInsets = insets
+    }
+
+    // MARK: - Actions
+
+    @objc
+    private func pauseButtonTapped(_ sender: UIBarButtonItem) {
+        updateToolbar(isPlaying: false)
+        viewModel.pause()
+    }
+
+    @objc
+    private func playButtonTapped(_ sender: UIBarButtonItem) {
+        updateToolbar(isPlaying: true)
+        viewModel.play()
+    }
+
+    @objc
+    private func stopButtonTapped(_ sender: UIBarButtonItem) {
+        updateToolbar(isPlaying: false)
+        viewModel.stop()
+    }
+
+    // MARK: - Helpers
+
+    private func updateToolbar(isPlaying: Bool) {
+        let titleLabel = UILabel()
+        titleLabel.text = viewModel.trackTitle ?? "Nic nevybráno"
+
+        // swiftlint:disable force_unwrapping
+        let pauseButton = UIBarButtonItem(image: UIImage(systemName: "pause.fill")!, style: .plain, target: self, action: #selector(pauseButtonTapped))
+        let playButton = UIBarButtonItem(image: UIImage(systemName: "play.fill")!, style: .plain, target: self, action: #selector(playButtonTapped))
+        let stopButton = UIBarButtonItem(image: UIImage(systemName: "stop.fill")!, style: .plain, target: self, action: #selector(stopButtonTapped))
+        // swiftlint:enable force_unwrapping
+        let titleLabelItem = UIBarButtonItem(customView: titleLabel)
+
+        playButton.isEnabled = viewModel.isTrackSelected
+        pauseButton.isEnabled = viewModel.isTrackSelected
+        stopButton.isEnabled = viewModel.isTrackSelected
+
+        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+
+        var items: [UIBarButtonItem] = [titleLabelItem, flexibleSpace, stopButton]
+        let itemToAppend: UIBarButtonItem = isPlaying ? pauseButton : playButton
+        items.append(itemToAppend)
+        toolbar.setItems(items, animated: false)
     }
 }
 
@@ -92,7 +157,9 @@ extension TrackListViewController: UICollectionViewDataSource {
 
 extension TrackListViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        viewModel.playTrack(at: indexPath)
+        viewModel.selectTrack(at: indexPath)
+        viewModel.play()
+        updateToolbar(isPlaying: true)
         collectionView.deselectItem(at: indexPath, animated: true)
     }
 
