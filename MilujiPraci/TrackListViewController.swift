@@ -14,13 +14,12 @@ private enum Constants {
     static let minimumInteritemSpacing: CGFloat = 10
     static let headerHeight = 30
 
-    static func itemWidth(fitting width: CGFloat) -> CGFloat {
-        return (width - (numberOfColumns + 1) * minimumInteritemSpacing) / numberOfColumns
+    static func itemWidth(fitting width: CGFloat) -> Double {
+        floor(Double((width - (numberOfColumns + 1) * minimumInteritemSpacing) / numberOfColumns))
     }
 }
 
 final class TrackListViewController: UIViewController {
-
     private weak var collectionView: UICollectionView!
 
     private let viewModel: TrackListViewModeling
@@ -42,7 +41,7 @@ final class TrackListViewController: UIViewController {
     override func loadView() {
         super.loadView()
 
-        view.backgroundColor = .white
+        view.backgroundColor = .systemBackground
 
         let layout = UICollectionViewFlowLayout()
         layout.minimumInteritemSpacing = Constants.minimumInteritemSpacing
@@ -69,17 +68,15 @@ final class TrackListViewController: UIViewController {
         collectionView.dataSource = self
         collectionView.delegate = self
     }
-
 }
 
 extension TrackListViewController: UICollectionViewDataSource {
-
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return viewModel.numberOfSections
+        viewModel.numberOfSections
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return viewModel.numberOfItems(in: section)
+        viewModel.numberOfItems(in: section)
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -91,11 +88,9 @@ extension TrackListViewController: UICollectionViewDataSource {
 
         return cell
     }
-
 }
 
 extension TrackListViewController: UICollectionViewDelegate {
-
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         viewModel.playTrack(at: indexPath)
         collectionView.deselectItem(at: indexPath, animated: true)
@@ -109,5 +104,4 @@ extension TrackListViewController: UICollectionViewDelegate {
 
         return header
     }
-
 }

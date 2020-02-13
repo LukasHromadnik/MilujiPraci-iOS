@@ -1,4 +1,5 @@
 platform :ios, '12.0'
+source 'https://cdn.cocoapods.org/'
 
 use_frameworks!
 inhibit_all_warnings!

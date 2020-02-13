@@ -16,23 +16,20 @@ protocol TrackListViewModeling {
 }
 
 extension TrackListViewModeling {
-
     var numberOfSections: Int {
-        return sections.count
+        sections.count
     }
 
     func numberOfItems(in section: Int) -> Int {
-        return DataSource.tracks(for: sections[section]).count
+        DataSource.tracks(for: sections[section]).count
     }
 
     func item(for indexPath: IndexPath) -> Track {
-        return DataSource.tracks(for: sections[indexPath.section])[indexPath.row]
+        DataSource.tracks(for: sections[indexPath.section])[indexPath.row]
     }
-
 }
 
 final class TrackListViewModel: TrackListViewModeling {
-
     let sections = DataSource.sections
 
     private var player: AVAudioPlayer?
@@ -48,5 +45,4 @@ final class TrackListViewModel: TrackListViewModeling {
         player?.prepareToPlay()
         player?.play()
     }
-
 }

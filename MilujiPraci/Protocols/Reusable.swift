@@ -12,28 +12,38 @@ protocol Reusable { }
 
 extension Reusable {
 
+    /// Reuse identifier describing the element
     static var reuseIdentifier: String {
-        // swiftlint:disable:next force_cast
-        return NSStringFromClass(self as! AnyObject.Type)
+        String(describing: self)
     }
-
 }
 
 extension UICollectionReusableView: Reusable { }
 
 extension UICollectionView {
 
-    func dequeueCell<Cell>(for indexPath: IndexPath) -> Cell where Cell: UICollectionViewCell {
+    /// Dequeues collection view cell of given type
+    ///
+    /// - Parameters:
+    ///   - indexPath: `IndexPath` of the cell
+    ///   - ofType: Helper parameter when the result type is not inferable
+    /// - Returns: Reusable `Cell` of given type
+    func dequeueCell<Cell>(for indexPath: IndexPath, ofType: Cell.Type = Cell.self) -> Cell where Cell: UICollectionViewCell {
         register(Cell.self, forCellWithReuseIdentifier: Cell.reuseIdentifier)
         // swiftlint:disable:next force_cast
         return dequeueReusableCell(withReuseIdentifier: Cell.reuseIdentifier, for: indexPath) as! Cell
     }
 
-    func dequeueHeader<Header>(for indexPath: IndexPath) -> Header where Header: UICollectionReusableView {
+    /// Dequeues collection view header of given type
+    ///
+    /// - Parameters:
+    ///   - indexPath: `IndexPath` of the header
+    ///   - ofType: Helper parameter when the result type is not inferable
+    /// - Returns: Reusable `Header` of given type
+    func dequeueHeader<Header>(for indexPath: IndexPath, ofType: Header.Type = Header.self) -> Header where Header: UICollectionReusableView {
         let kind = UICollectionView.elementKindSectionHeader
         register(Header.self, forSupplementaryViewOfKind: kind, withReuseIdentifier: Header.reuseIdentifier)
         // swiftlint:disable:next force_cast
         return dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: Header.reuseIdentifier, for: indexPath) as! Header
     }
-
 }

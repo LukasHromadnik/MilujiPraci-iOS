@@ -9,9 +9,8 @@
 import UIKit
 
 final class TrackCollectionViewCell: UICollectionViewCell {
-
     var title: String? {
-        get { return titleLabel.text }
+        get { titleLabel.text }
         set { titleLabel.text = newValue }
     }
 
@@ -54,5 +53,4 @@ final class TrackCollectionViewCell: UICollectionViewCell {
         }
         self.titleLabel = titleLabel
     }
-
 }

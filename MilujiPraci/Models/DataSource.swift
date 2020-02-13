@@ -9,7 +9,6 @@
 import UIKit
 
 enum DataSource {
-
     static let sections: [Section] = [.basic, .extra, .milos]
 
     // swiftlint:disable:next function_body_length
@@ -62,5 +61,4 @@ enum DataSource {
             ]
         }
     }
-
 }

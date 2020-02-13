@@ -14,9 +14,7 @@ struct Track {
 }
 
 extension Track {
-
     var fileURL: URL? {
-        return Bundle.main.url(forResource: filename, withExtension: nil)
+        Bundle.main.url(forResource: filename, withExtension: nil)
     }
-
 }

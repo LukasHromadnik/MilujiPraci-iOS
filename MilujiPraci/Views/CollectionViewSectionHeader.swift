@@ -9,9 +9,8 @@
 import UIKit
 
 final class CollectionViewSectionHeader: UICollectionReusableView {
-
     var title: String? {
-        get { return titleLabel.text }
+        get { titleLabel.text }
         set { titleLabel.text = newValue }
     }
 
@@ -32,7 +31,7 @@ final class CollectionViewSectionHeader: UICollectionReusableView {
     // MARK: - Components setup
 
     private func setup() {
-        backgroundColor = UIColor(white: 0, alpha: 0.1)
+        backgroundColor = .secondarySystemBackground
 
         let titleLabel = UILabel()
         titleLabel.font = UIFont.preferredFont(forTextStyle: .headline)
@@ -59,5 +58,4 @@ final class CollectionViewSectionHeader: UICollectionReusableView {
             make.height.equalTo(1 / UIScreen.main.scale)
         }
     }
-
 }
