@@ -14,6 +14,7 @@ protocol TrackListViewModeling: NSObjectProtocol {
     var trackTitle: String? { get }
     var isTrackSelected: Bool { get }
     var onFinish: (() -> Void)? { get set }
+    var onDurationChange: ((Double) -> Void)? { get set }
 
     func play()
     func pause()
@@ -47,19 +48,23 @@ final class TrackListViewModel: NSObject, TrackListViewModeling {
     }
 
     var onFinish: (() -> Void)?
+    var onDurationChange: ((Double) -> Void)?
 
     private var selectedTrack: Track?
     private var player: AVAudioPlayer?
+    private var timer: Timer?
 
     // MARK: - Public API
 
     func pause() {
         player?.pause()
+        timer?.invalidate()
     }
 
     func play() {
         if (player?.currentTime ?? 0) == 0 {
             player?.stop()
+            timer?.invalidate()
 
             guard let url = selectedTrack?.fileURL else { return }
 
@@ -70,13 +75,18 @@ final class TrackListViewModel: NSObject, TrackListViewModeling {
             try? audioSession.setCategory(.playback)
             try? audioSession.setActive(true)
         }
-
+        timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { [weak self] _ in
+            let currentTime = self?.player?.currentTime ?? 0
+            let totalTime = self?.player?.duration ?? 0
+            self?.onDurationChange?(currentTime / totalTime)
+        }
         player?.play()
     }
 
     func stop() {
         pause()
         player?.currentTime = 0
+        onDurationChange?(0)
     }
 
     func selectTrack(at indexPath: IndexPath) {
@@ -87,6 +97,7 @@ final class TrackListViewModel: NSObject, TrackListViewModeling {
 extension TrackListViewModel: AVAudioPlayerDelegate {
     func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
         try? AVAudioSession.sharedInstance().setActive(false, options: .notifyOthersOnDeactivation)
+        stop()
         onFinish?()
     }
 }

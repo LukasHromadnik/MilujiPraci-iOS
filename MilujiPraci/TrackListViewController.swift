@@ -22,6 +22,7 @@ private enum Constants {
 final class TrackListViewController: UIViewController {
     private weak var collectionView: UICollectionView!
     private weak var toolbar: UIToolbar!
+    private weak var progressView: UIProgressView!
 
     private let viewModel: TrackListViewModeling
 
@@ -67,6 +68,13 @@ final class TrackListViewController: UIViewController {
         }
         self.toolbar = toolbar
 
+        let progressView = UIProgressView(progressViewStyle: .bar)
+        toolbar.addSubview(progressView)
+        progressView.snp.makeConstraints { (make) in
+            make.top.leading.trailing.equalToSuperview()
+        }
+        self.progressView = progressView
+
         updateToolbar(isPlaying: false)
     }
 
@@ -79,6 +87,7 @@ final class TrackListViewController: UIViewController {
         collectionView.delegate = self
 
         viewModel.onFinish = { [weak self] in self?.updateToolbar(isPlaying: false) }
+        viewModel.onDurationChange = { [weak self] in self?.progressView.progress = Float($0) }
     }
 
     override func viewDidLayoutSubviews() {
