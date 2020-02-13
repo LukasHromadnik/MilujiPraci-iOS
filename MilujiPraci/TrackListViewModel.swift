@@ -29,7 +29,7 @@ extension TrackListViewModeling {
     }
 }
 
-final class TrackListViewModel: TrackListViewModeling {
+final class TrackListViewModel: NSObject, TrackListViewModeling {
     let sections = DataSource.sections
 
     private var player: AVAudioPlayer?
@@ -42,7 +42,17 @@ final class TrackListViewModel: TrackListViewModeling {
         guard let url = item(for: indexPath).fileURL else { return }
 
         player = try? AVAudioPlayer(contentsOf: url)
+        player?.delegate = self
         player?.prepareToPlay()
+        let audioSession = AVAudioSession.sharedInstance()
+        try? audioSession.setCategory(.playback)
+        try? audioSession.setActive(true)
         player?.play()
+    }
+}
+
+extension TrackListViewModel: AVAudioPlayerDelegate {
+    func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
+        try? AVAudioSession.sharedInstance().setActive(false, options: .notifyOthersOnDeactivation)
     }
 }
