@@ -39,13 +39,8 @@ extension TrackListViewModeling {
 final class TrackListViewModel: NSObject, TrackListViewModeling {
     let sections = DataSource.sections
 
-    var trackTitle: String? {
-        selectedTrack?.title
-    }
-
-    var isTrackSelected: Bool {
-        selectedTrack != nil
-    }
+    var trackTitle: String? { selectedTrack?.title }
+    var isTrackSelected: Bool { selectedTrack != nil }
 
     var onFinish: (() -> Void)?
     var onDurationChange: ((Double) -> Void)?
@@ -75,13 +70,17 @@ final class TrackListViewModel: NSObject, TrackListViewModeling {
             try? audioSession.setCategory(.playback)
             try? audioSession.setActive(true)
         }
-        timer = Timer.scheduledTimer(withTimeInterval: 0.01, repeats: true) { [weak self] _ in
+
+        let timer = Timer.scheduledTimer(withTimeInterval: 0.01, repeats: true) { [weak self] _ in
             let currentTime = self?.player?.currentTime ?? 0
             let totalTime = self?.player?.duration ?? 0
             self?.onDurationChange?(currentTime / totalTime)
         }
-        // swiftlint:disable:next force_unwrapping
-        RunLoop.main.add(timer!, forMode: .common)
+        self.timer = timer
+
+        // Timer was disabled during scrolling, this line fixes it
+        RunLoop.main.add(timer, forMode: .common)
+
         player?.play()
     }
 
