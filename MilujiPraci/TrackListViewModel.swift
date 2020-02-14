@@ -80,6 +80,8 @@ final class TrackListViewModel: NSObject, TrackListViewModeling {
             let totalTime = self?.player?.duration ?? 0
             self?.onDurationChange?(currentTime / totalTime)
         }
+        // swiftlint:disable:next force_unwrapping
+        RunLoop.main.add(timer!, forMode: .common)
         player?.play()
     }
 
