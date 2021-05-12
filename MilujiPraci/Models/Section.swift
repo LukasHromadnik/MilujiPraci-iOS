@@ -8,24 +8,8 @@
 
 import UIKit
 
-enum Section {
-    case basic
-    case extra
-    case milos
-
-    var title: String {
-        switch self {
-        case .basic: return "Basic"
-        case .extra: return "Extra"
-        case .milos: return "Miloš Zeman"
-        }
-    }
-
-    var backgroundColor: UIColor {
-        switch self {
-        case .basic: return .mainGreen
-        case .extra: return .mainGreen
-        case .milos: return .mainPink
-        }
-    }
+struct Section {
+    let name: String
+    let color: UIColor
+    let tracks: [Track]
 }

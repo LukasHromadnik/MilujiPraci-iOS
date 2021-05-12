@@ -10,7 +10,6 @@ import Foundation
 import AVKit
 
 protocol TrackListViewModeling: NSObjectProtocol {
-    var sections: [Section] { get }
     var trackTitle: String? { get }
     var isTrackSelected: Bool { get }
     var onFinish: (() -> Void)? { get set }
@@ -24,21 +23,27 @@ protocol TrackListViewModeling: NSObjectProtocol {
 
 extension TrackListViewModeling {
     var numberOfSections: Int {
-        sections.count
+        dataSource.count
     }
 
     func numberOfItems(in section: Int) -> Int {
-        DataSource.tracks(for: sections[section]).count
+        dataSource[section].tracks.count
     }
 
     func item(for indexPath: IndexPath) -> Track {
-        DataSource.tracks(for: sections[indexPath.section])[indexPath.row]
+        dataSource[indexPath.section].tracks[indexPath.row]
+    }
+
+    func backgroundColor(for indexPath: IndexPath) -> UIColor {
+        dataSource[indexPath.section].color
+    }
+
+    func sectionTitle(at indexPath: IndexPath) -> String {
+        dataSource[indexPath.section].name
     }
 }
 
 final class TrackListViewModel: NSObject, TrackListViewModeling {
-    let sections = DataSource.sections
-
     var trackTitle: String? { selectedTrack?.title }
     var isTrackSelected: Bool { selectedTrack != nil }
 

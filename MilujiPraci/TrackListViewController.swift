@@ -157,7 +157,7 @@ extension TrackListViewController: UICollectionViewDataSource {
         let item = viewModel.item(for: indexPath)
 
         let cell: TrackCollectionViewCell = collectionView.dequeueCell(for: indexPath)
-        cell.backgroundColor = viewModel.sections[indexPath.section].backgroundColor
+        cell.backgroundColor = viewModel.backgroundColor(for: indexPath)
         cell.title = item.title
 
         return cell
@@ -176,7 +176,7 @@ extension TrackListViewController: UICollectionViewDelegate {
         guard kind == UICollectionView.elementKindSectionHeader else { assertionFailure(); return UICollectionReusableView() }
 
         let header: CollectionViewSectionHeader = collectionView.dequeueHeader(for: indexPath)
-        header.title = viewModel.sections[indexPath.section].title
+        header.title = viewModel.sectionTitle(at: indexPath)
 
         return header
     }

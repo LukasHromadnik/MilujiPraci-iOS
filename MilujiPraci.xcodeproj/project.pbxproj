@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXAggregateTarget section */
@@ -69,8 +69,8 @@
 		A3D67EB52279A399009A211E /* kunda.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3D67EAF2279A399009A211E /* kunda.mp3 */; };
 		A3D67EB62279A399009A211E /* kunda-sem.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3D67EB02279A399009A211E /* kunda-sem.mp3 */; };
 		A3F67489222FCF640088E94A /* TrackCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F67488222FCF640088E94A /* TrackCollectionViewCell.swift */; };
-		A3F6748D222FEFEE0088E94A /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3F6748C222FEFEE0088E94A /* SnapKit.framework */; };
 		A3F674DC222FF92C0088E94A /* TrackListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F674DB222FF92C0088E94A /* TrackListViewModel.swift */; };
+		A3FA6133264B9E8D0053CA6E /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = A3FA6132264B9E8D0053CA6E /* SnapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -134,9 +134,7 @@
 		A3D67EAF2279A399009A211E /* kunda.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = kunda.mp3; sourceTree = "<group>"; };
 		A3D67EB02279A399009A211E /* kunda-sem.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "kunda-sem.mp3"; sourceTree = "<group>"; };
 		A3F67488222FCF640088E94A /* TrackCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackCollectionViewCell.swift; sourceTree = "<group>"; };
-		A3F6748C222FEFEE0088E94A /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
 		A3F674DB222FF92C0088E94A /* TrackListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackListViewModel.swift; sourceTree = "<group>"; };
-		ABAB9AADDA5040E66520BB1A /* Pods_MilujuPraci.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MilujuPraci.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,22 +142,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A3F6748D222FEFEE0088E94A /* SnapKit.framework in Frameworks */,
+				A3FA6133264B9E8D0053CA6E /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		35B13B0B3D9F6D54671C0104 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				A3F6748C222FEFEE0088E94A /* SnapKit.framework */,
-				ABAB9AADDA5040E66520BB1A /* Pods_MilujuPraci.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		A31021E6223074D500B8B4A7 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
@@ -174,7 +163,6 @@
 				A31CA3612226684C00DB35B2 /* MilujiPraci */,
 				A3D67E242279A308009A211E /* Sounds */,
 				A31CA3602226684C00DB35B2 /* Products */,
-				35B13B0B3D9F6D54671C0104 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -308,7 +296,6 @@
 				A31CA35B2226684C00DB35B2 /* Sources */,
 				A31CA35C2226684C00DB35B2 /* Frameworks */,
 				A31CA35D2226684C00DB35B2 /* Resources */,
-				1L4F4QS6VYVG50JGVB5KN4A3 /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -316,6 +303,9 @@
 				A31021EF2230777A00B8B4A7 /* PBXTargetDependency */,
 			);
 			name = MilujiPraci;
+			packageProductDependencies = (
+				A3FA6132264B9E8D0053CA6E /* SnapKit */,
+			);
 			productName = MilujuPraci;
 			productReference = A31CA35F2226684C00DB35B2 /* MilujiPraci.app */;
 			productType = "com.apple.product-type.application";
@@ -348,6 +338,9 @@
 				Base,
 			);
 			mainGroup = A31CA3562226684C00DB35B2;
+			packageReferences = (
+				A3FA6131264B9E8D0053CA6E /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = A31CA3602226684C00DB35B2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -407,27 +400,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1L4F4QS6VYVG50JGVB5KN4A3 /* Carthage */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"$(SRCROOT)/Carthage/xcfilelists/MilujuPraci-inputPaths.xcfilelist",
-			);
-			inputPaths = (
-			);
-			name = Carthage;
-			outputFileListPaths = (
-				"$(SRCROOT)/Carthage/xcfilelists/MilujuPraci-outputPaths.xcfilelist",
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
-			showEnvVarsInLog = 0;
-		};
 		A31021ED2230776100B8B4A7 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -443,7 +415,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "./Pods/SwiftLint/swiftlint autocorrect\n./Pods/SwiftLint/swiftlint\n";
+			shellScript = "mint run swiftlint autocorrect\nmint run swiftlint\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -641,7 +613,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = cz.ackee.enterprise.MilujiPraci;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "match Development cz.ackee.enterprise.* 1573738454";
+				PROVISIONING_PROFILE_SPECIFIER = "match Development cz.ackee.enterprise.*";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -703,6 +675,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A3FA6131264B9E8D0053CA6E /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A3FA6132264B9E8D0053CA6E /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A3FA6131264B9E8D0053CA6E /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A31CA3572226684C00DB35B2 /* Project object */;
 }

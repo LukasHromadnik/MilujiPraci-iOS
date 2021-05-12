@@ -9,7 +9,6 @@
 import UIKit
 
 extension UIEdgeInsets {
-
     /// Creates insets with same given `size`
     init(size: CGFloat) {
         self.init(top: size, left: size, bottom: size, right: size)
