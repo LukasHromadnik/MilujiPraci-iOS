@@ -1,0 +1,578 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A38659952743AE4F00773F0C /* MilujuPraciApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38659942743AE4F00773F0C /* MilujuPraciApp.swift */; };
+		A38659972743AE4F00773F0C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38659962743AE4F00773F0C /* ContentView.swift */; };
+		A38659992743AE4F00773F0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A38659982743AE4F00773F0C /* Assets.xcassets */; };
+		A386599C2743AE4F00773F0C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A386599B2743AE4F00773F0C /* Preview Assets.xcassets */; };
+		A3865A142743AEB000773F0C /* nejvetsi-blbec-na-zemekouli.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A38659EF2743AEB000773F0C /* nejvetsi-blbec-na-zemekouli.mp3 */; };
+		A3865A152743AEB000773F0C /* banalni-vec.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A38659F02743AEB000773F0C /* banalni-vec.mp3 */; };
+		A3865A162743AEB000773F0C /* to-je-pico-nemozne.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A38659F12743AEB000773F0C /* to-je-pico-nemozne.mp3 */; };
+		A3865A172743AEB000773F0C /* ja-to-mrdam.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A38659F22743AEB000773F0C /* ja-to-mrdam.mp3 */; };
+		A3865A182743AEB000773F0C /* nevim-jak.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A38659F32743AEB000773F0C /* nevim-jak.mp3 */; };
+		A3865A192743AEB000773F0C /* tady-musis-vsechno-rozdelat.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A38659F42743AEB000773F0C /* tady-musis-vsechno-rozdelat.mp3 */; };
+		A3865A1A2743AEB000773F0C /* kurva.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A38659F52743AEB000773F0C /* kurva.mp3 */; };
+		A3865A1B2743AEB000773F0C /* ja-to-nejdu-delat.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A38659F62743AEB000773F0C /* ja-to-nejdu-delat.mp3 */; };
+		A3865A1C2743AEB000773F0C /* jedinou-picovinku.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A38659F72743AEB000773F0C /* jedinou-picovinku.mp3 */; };
+		A3865A1D2743AEB000773F0C /* jedu-do-pici-stadyma.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A38659F82743AEB000773F0C /* jedu-do-pici-stadyma.mp3 */; };
+		A3865A1E2743AEB000773F0C /* kurva-do-pice-to-neni-mozne.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A38659F92743AEB000773F0C /* kurva-do-pice-to-neni-mozne.mp3 */; };
+		A3865A1F2743AEB000773F0C /* neresitelny-problem-hosi.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A38659FA2743AEB000773F0C /* neresitelny-problem-hosi.mp3 */; };
+		A3865A202743AEB000773F0C /* okamzite-zabit-ty-kurvy.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A38659FB2743AEB000773F0C /* okamzite-zabit-ty-kurvy.mp3 */; };
+		A3865A212743AEB000773F0C /* kurva-uz.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A38659FC2743AEB000773F0C /* kurva-uz.mp3 */; };
+		A3865A222743AEB000773F0C /* tuto-picu-potrebuju-utahnout.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A38659FD2743AEB000773F0C /* tuto-picu-potrebuju-utahnout.mp3 */; };
+		A3865A232743AEB000773F0C /* nebudu-to-delat.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A38659FE2743AEB000773F0C /* nebudu-to-delat.mp3 */; };
+		A3865A242743AEB000773F0C /* abych-mohl-toto.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A38659FF2743AEB000773F0C /* abych-mohl-toto.mp3 */; };
+		A3865A252743AEB000773F0C /* ja-se-z-toho-musim-pojebat.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3865A002743AEB000773F0C /* ja-se-z-toho-musim-pojebat.mp3 */; };
+		A3865A262743AEB000773F0C /* ani-ocko-nenasadis.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3865A012743AEB000773F0C /* ani-ocko-nenasadis.mp3 */; };
+		A3865A272743AEB000773F0C /* to-neni-normalni-kurva.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3865A022743AEB000773F0C /* to-neni-normalni-kurva.mp3 */; };
+		A3865A282743AEB000773F0C /* past-vedle-pasti-pico.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3865A032743AEB000773F0C /* past-vedle-pasti-pico.mp3 */; };
+		A3865A292743AEB000773F0C /* pockej-kamo.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3865A042743AEB000773F0C /* pockej-kamo.mp3 */; };
+		A3865A2A2743AEB000773F0C /* ani-za-kokot-vole.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3865A052743AEB000773F0C /* ani-za-kokot-vole.mp3 */; };
+		A3865A2B2743AEB000773F0C /* ne-nenasadis-ho.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3865A062743AEB000773F0C /* ne-nenasadis-ho.mp3 */; };
+		A3865A2C2743AEB000773F0C /* zasrane-zamrdane.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3865A072743AEB000773F0C /* zasrane-zamrdane.mp3 */; };
+		A3865A2D2743AEB000773F0C /* hajzli-jedni.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3865A082743AEB000773F0C /* hajzli-jedni.mp3 */; };
+		A3865A2E2743AEB000773F0C /* hosi-to-je-neuveritelne.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3865A092743AEB000773F0C /* hosi-to-je-neuveritelne.mp3 */; };
+		A3865A2F2743AEB000773F0C /* nenasadim.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3865A0A2743AEB000773F0C /* nenasadim.mp3 */; };
+		A3865A302743AEB000773F0C /* do-pice.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3865A0B2743AEB000773F0C /* do-pice.mp3 */; };
+		A3865A312743AEB000773F0C /* to-sou-nervy-ty-pico.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3865A0C2743AEB000773F0C /* to-sou-nervy-ty-pico.mp3 */; };
+		A3865A322743AEB000773F0C /* kunda-tam.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3865A0E2743AEB000773F0C /* kunda-tam.mp3 */; };
+		A3865A332743AEB000773F0C /* kunda.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3865A0F2743AEB000773F0C /* kunda.mp3 */; };
+		A3865A342743AEB000773F0C /* kurev.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3865A102743AEB000773F0C /* kurev.mp3 */; };
+		A3865A352743AEB000773F0C /* hovno.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3865A112743AEB000773F0C /* hovno.mp3 */; };
+		A3865A362743AEB000773F0C /* kunda-sem.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3865A122743AEB000773F0C /* kunda-sem.mp3 */; };
+		A3865A372743AEB000773F0C /* zkurvila.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A3865A132743AEB000773F0C /* zkurvila.mp3 */; };
+		A3865A3C2743AEE200773F0C /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3865A392743AEE200773F0C /* Track.swift */; };
+		A3865A3D2743AEE200773F0C /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3865A3A2743AEE200773F0C /* Section.swift */; };
+		A3865A3E2743AEE200773F0C /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3865A3B2743AEE200773F0C /* DataSource.swift */; };
+		A3865A412743AEF800773F0C /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3865A402743AEF800773F0C /* Color.swift */; };
+		A3AFEC1927444FB700DDFD27 /* PlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3AFEC1827444FB700DDFD27 /* PlayerManager.swift */; };
+		A3AFEC1B27444FD200DDFD27 /* TrackViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3AFEC1A27444FD200DDFD27 /* TrackViewModel.swift */; };
+		A3AFEC1D2744500300DDFD27 /* TrackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3AFEC1C2744500300DDFD27 /* TrackView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A38659912743AE4F00773F0C /* MilujiPraci.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MilujiPraci.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A38659942743AE4F00773F0C /* MilujuPraciApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MilujuPraciApp.swift; sourceTree = "<group>"; };
+		A38659962743AE4F00773F0C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A38659982743AE4F00773F0C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A386599B2743AE4F00773F0C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A38659EF2743AEB000773F0C /* nejvetsi-blbec-na-zemekouli.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "nejvetsi-blbec-na-zemekouli.mp3"; sourceTree = "<group>"; };
+		A38659F02743AEB000773F0C /* banalni-vec.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "banalni-vec.mp3"; sourceTree = "<group>"; };
+		A38659F12743AEB000773F0C /* to-je-pico-nemozne.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "to-je-pico-nemozne.mp3"; sourceTree = "<group>"; };
+		A38659F22743AEB000773F0C /* ja-to-mrdam.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "ja-to-mrdam.mp3"; sourceTree = "<group>"; };
+		A38659F32743AEB000773F0C /* nevim-jak.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "nevim-jak.mp3"; sourceTree = "<group>"; };
+		A38659F42743AEB000773F0C /* tady-musis-vsechno-rozdelat.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "tady-musis-vsechno-rozdelat.mp3"; sourceTree = "<group>"; };
+		A38659F52743AEB000773F0C /* kurva.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = kurva.mp3; sourceTree = "<group>"; };
+		A38659F62743AEB000773F0C /* ja-to-nejdu-delat.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "ja-to-nejdu-delat.mp3"; sourceTree = "<group>"; };
+		A38659F72743AEB000773F0C /* jedinou-picovinku.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "jedinou-picovinku.mp3"; sourceTree = "<group>"; };
+		A38659F82743AEB000773F0C /* jedu-do-pici-stadyma.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "jedu-do-pici-stadyma.mp3"; sourceTree = "<group>"; };
+		A38659F92743AEB000773F0C /* kurva-do-pice-to-neni-mozne.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "kurva-do-pice-to-neni-mozne.mp3"; sourceTree = "<group>"; };
+		A38659FA2743AEB000773F0C /* neresitelny-problem-hosi.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "neresitelny-problem-hosi.mp3"; sourceTree = "<group>"; };
+		A38659FB2743AEB000773F0C /* okamzite-zabit-ty-kurvy.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "okamzite-zabit-ty-kurvy.mp3"; sourceTree = "<group>"; };
+		A38659FC2743AEB000773F0C /* kurva-uz.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "kurva-uz.mp3"; sourceTree = "<group>"; };
+		A38659FD2743AEB000773F0C /* tuto-picu-potrebuju-utahnout.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "tuto-picu-potrebuju-utahnout.mp3"; sourceTree = "<group>"; };
+		A38659FE2743AEB000773F0C /* nebudu-to-delat.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "nebudu-to-delat.mp3"; sourceTree = "<group>"; };
+		A38659FF2743AEB000773F0C /* abych-mohl-toto.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "abych-mohl-toto.mp3"; sourceTree = "<group>"; };
+		A3865A002743AEB000773F0C /* ja-se-z-toho-musim-pojebat.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "ja-se-z-toho-musim-pojebat.mp3"; sourceTree = "<group>"; };
+		A3865A012743AEB000773F0C /* ani-ocko-nenasadis.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "ani-ocko-nenasadis.mp3"; sourceTree = "<group>"; };
+		A3865A022743AEB000773F0C /* to-neni-normalni-kurva.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "to-neni-normalni-kurva.mp3"; sourceTree = "<group>"; };
+		A3865A032743AEB000773F0C /* past-vedle-pasti-pico.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "past-vedle-pasti-pico.mp3"; sourceTree = "<group>"; };
+		A3865A042743AEB000773F0C /* pockej-kamo.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "pockej-kamo.mp3"; sourceTree = "<group>"; };
+		A3865A052743AEB000773F0C /* ani-za-kokot-vole.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "ani-za-kokot-vole.mp3"; sourceTree = "<group>"; };
+		A3865A062743AEB000773F0C /* ne-nenasadis-ho.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "ne-nenasadis-ho.mp3"; sourceTree = "<group>"; };
+		A3865A072743AEB000773F0C /* zasrane-zamrdane.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "zasrane-zamrdane.mp3"; sourceTree = "<group>"; };
+		A3865A082743AEB000773F0C /* hajzli-jedni.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "hajzli-jedni.mp3"; sourceTree = "<group>"; };
+		A3865A092743AEB000773F0C /* hosi-to-je-neuveritelne.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "hosi-to-je-neuveritelne.mp3"; sourceTree = "<group>"; };
+		A3865A0A2743AEB000773F0C /* nenasadim.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = nenasadim.mp3; sourceTree = "<group>"; };
+		A3865A0B2743AEB000773F0C /* do-pice.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "do-pice.mp3"; sourceTree = "<group>"; };
+		A3865A0C2743AEB000773F0C /* to-sou-nervy-ty-pico.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "to-sou-nervy-ty-pico.mp3"; sourceTree = "<group>"; };
+		A3865A0E2743AEB000773F0C /* kunda-tam.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "kunda-tam.mp3"; sourceTree = "<group>"; };
+		A3865A0F2743AEB000773F0C /* kunda.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = kunda.mp3; sourceTree = "<group>"; };
+		A3865A102743AEB000773F0C /* kurev.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = kurev.mp3; sourceTree = "<group>"; };
+		A3865A112743AEB000773F0C /* hovno.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = hovno.mp3; sourceTree = "<group>"; };
+		A3865A122743AEB000773F0C /* kunda-sem.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "kunda-sem.mp3"; sourceTree = "<group>"; };
+		A3865A132743AEB000773F0C /* zkurvila.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = zkurvila.mp3; sourceTree = "<group>"; };
+		A3865A392743AEE200773F0C /* Track.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
+		A3865A3A2743AEE200773F0C /* Section.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
+		A3865A3B2743AEE200773F0C /* DataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
+		A3865A402743AEF800773F0C /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		A3AFEC1827444FB700DDFD27 /* PlayerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerManager.swift; sourceTree = "<group>"; };
+		A3AFEC1A27444FD200DDFD27 /* TrackViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackViewModel.swift; sourceTree = "<group>"; };
+		A3AFEC1C2744500300DDFD27 /* TrackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A386598E2743AE4F00773F0C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A38659882743AE4F00773F0C = {
+			isa = PBXGroup;
+			children = (
+				A38659932743AE4F00773F0C /* MilujiPraci */,
+				A38659ED2743AEB000773F0C /* Sounds */,
+				A38659922743AE4F00773F0C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A38659922743AE4F00773F0C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A38659912743AE4F00773F0C /* MilujiPraci.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A38659932743AE4F00773F0C /* MilujiPraci */ = {
+			isa = PBXGroup;
+			children = (
+				A3865A3F2743AEF200773F0C /* Extensions */,
+				A3865A382743AEE200773F0C /* Models */,
+				A38659942743AE4F00773F0C /* MilujuPraciApp.swift */,
+				A38659962743AE4F00773F0C /* ContentView.swift */,
+				A3AFEC1C2744500300DDFD27 /* TrackView.swift */,
+				A3AFEC1A27444FD200DDFD27 /* TrackViewModel.swift */,
+				A3AFEC1827444FB700DDFD27 /* PlayerManager.swift */,
+				A38659982743AE4F00773F0C /* Assets.xcassets */,
+				A386599A2743AE4F00773F0C /* Preview Content */,
+			);
+			path = MilujiPraci;
+			sourceTree = "<group>";
+		};
+		A386599A2743AE4F00773F0C /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				A386599B2743AE4F00773F0C /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A38659ED2743AEB000773F0C /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				A38659EE2743AEB000773F0C /* Basic */,
+				A3865A0D2743AEB000773F0C /* Milos */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
+		A38659EE2743AEB000773F0C /* Basic */ = {
+			isa = PBXGroup;
+			children = (
+				A38659EF2743AEB000773F0C /* nejvetsi-blbec-na-zemekouli.mp3 */,
+				A38659F02743AEB000773F0C /* banalni-vec.mp3 */,
+				A38659F12743AEB000773F0C /* to-je-pico-nemozne.mp3 */,
+				A38659F22743AEB000773F0C /* ja-to-mrdam.mp3 */,
+				A38659F32743AEB000773F0C /* nevim-jak.mp3 */,
+				A38659F42743AEB000773F0C /* tady-musis-vsechno-rozdelat.mp3 */,
+				A38659F52743AEB000773F0C /* kurva.mp3 */,
+				A38659F62743AEB000773F0C /* ja-to-nejdu-delat.mp3 */,
+				A38659F72743AEB000773F0C /* jedinou-picovinku.mp3 */,
+				A38659F82743AEB000773F0C /* jedu-do-pici-stadyma.mp3 */,
+				A38659F92743AEB000773F0C /* kurva-do-pice-to-neni-mozne.mp3 */,
+				A38659FA2743AEB000773F0C /* neresitelny-problem-hosi.mp3 */,
+				A38659FB2743AEB000773F0C /* okamzite-zabit-ty-kurvy.mp3 */,
+				A38659FC2743AEB000773F0C /* kurva-uz.mp3 */,
+				A38659FD2743AEB000773F0C /* tuto-picu-potrebuju-utahnout.mp3 */,
+				A38659FE2743AEB000773F0C /* nebudu-to-delat.mp3 */,
+				A38659FF2743AEB000773F0C /* abych-mohl-toto.mp3 */,
+				A3865A002743AEB000773F0C /* ja-se-z-toho-musim-pojebat.mp3 */,
+				A3865A012743AEB000773F0C /* ani-ocko-nenasadis.mp3 */,
+				A3865A022743AEB000773F0C /* to-neni-normalni-kurva.mp3 */,
+				A3865A032743AEB000773F0C /* past-vedle-pasti-pico.mp3 */,
+				A3865A042743AEB000773F0C /* pockej-kamo.mp3 */,
+				A3865A052743AEB000773F0C /* ani-za-kokot-vole.mp3 */,
+				A3865A062743AEB000773F0C /* ne-nenasadis-ho.mp3 */,
+				A3865A072743AEB000773F0C /* zasrane-zamrdane.mp3 */,
+				A3865A082743AEB000773F0C /* hajzli-jedni.mp3 */,
+				A3865A092743AEB000773F0C /* hosi-to-je-neuveritelne.mp3 */,
+				A3865A0A2743AEB000773F0C /* nenasadim.mp3 */,
+				A3865A0B2743AEB000773F0C /* do-pice.mp3 */,
+				A3865A0C2743AEB000773F0C /* to-sou-nervy-ty-pico.mp3 */,
+			);
+			path = Basic;
+			sourceTree = "<group>";
+		};
+		A3865A0D2743AEB000773F0C /* Milos */ = {
+			isa = PBXGroup;
+			children = (
+				A3865A0E2743AEB000773F0C /* kunda-tam.mp3 */,
+				A3865A0F2743AEB000773F0C /* kunda.mp3 */,
+				A3865A102743AEB000773F0C /* kurev.mp3 */,
+				A3865A112743AEB000773F0C /* hovno.mp3 */,
+				A3865A122743AEB000773F0C /* kunda-sem.mp3 */,
+				A3865A132743AEB000773F0C /* zkurvila.mp3 */,
+			);
+			path = Milos;
+			sourceTree = "<group>";
+		};
+		A3865A382743AEE200773F0C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A3865A392743AEE200773F0C /* Track.swift */,
+				A3865A3A2743AEE200773F0C /* Section.swift */,
+				A3865A3B2743AEE200773F0C /* DataSource.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A3865A3F2743AEF200773F0C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A3865A402743AEF800773F0C /* Color.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A38659902743AE4F00773F0C /* MilujiPraci */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A386599F2743AE4F00773F0C /* Build configuration list for PBXNativeTarget "MilujiPraci" */;
+			buildPhases = (
+				A3AFEC1E274450F000DDFD27 /* Swiftlint */,
+				A386598D2743AE4F00773F0C /* Sources */,
+				A386598E2743AE4F00773F0C /* Frameworks */,
+				A386598F2743AE4F00773F0C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MilujiPraci;
+			productName = MilujuPraci;
+			productReference = A38659912743AE4F00773F0C /* MilujiPraci.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A38659892743AE4F00773F0C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1310;
+				LastUpgradeCheck = 1310;
+				TargetAttributes = {
+					A38659902743AE4F00773F0C = {
+						CreatedOnToolsVersion = 13.1;
+					};
+				};
+			};
+			buildConfigurationList = A386598C2743AE4F00773F0C /* Build configuration list for PBXProject "MilujiPraci" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A38659882743AE4F00773F0C;
+			productRefGroup = A38659922743AE4F00773F0C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A38659902743AE4F00773F0C /* MilujiPraci */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A386598F2743AE4F00773F0C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3865A242743AEB000773F0C /* abych-mohl-toto.mp3 in Resources */,
+				A3865A352743AEB000773F0C /* hovno.mp3 in Resources */,
+				A3865A1D2743AEB000773F0C /* jedu-do-pici-stadyma.mp3 in Resources */,
+				A3865A302743AEB000773F0C /* do-pice.mp3 in Resources */,
+				A3865A172743AEB000773F0C /* ja-to-mrdam.mp3 in Resources */,
+				A386599C2743AE4F00773F0C /* Preview Assets.xcassets in Resources */,
+				A3865A252743AEB000773F0C /* ja-se-z-toho-musim-pojebat.mp3 in Resources */,
+				A3865A322743AEB000773F0C /* kunda-tam.mp3 in Resources */,
+				A3865A192743AEB000773F0C /* tady-musis-vsechno-rozdelat.mp3 in Resources */,
+				A3865A342743AEB000773F0C /* kurev.mp3 in Resources */,
+				A3865A222743AEB000773F0C /* tuto-picu-potrebuju-utahnout.mp3 in Resources */,
+				A3865A2D2743AEB000773F0C /* hajzli-jedni.mp3 in Resources */,
+				A3865A2C2743AEB000773F0C /* zasrane-zamrdane.mp3 in Resources */,
+				A3865A2F2743AEB000773F0C /* nenasadim.mp3 in Resources */,
+				A3865A372743AEB000773F0C /* zkurvila.mp3 in Resources */,
+				A3865A182743AEB000773F0C /* nevim-jak.mp3 in Resources */,
+				A3865A282743AEB000773F0C /* past-vedle-pasti-pico.mp3 in Resources */,
+				A3865A152743AEB000773F0C /* banalni-vec.mp3 in Resources */,
+				A3865A272743AEB000773F0C /* to-neni-normalni-kurva.mp3 in Resources */,
+				A3865A1F2743AEB000773F0C /* neresitelny-problem-hosi.mp3 in Resources */,
+				A3865A312743AEB000773F0C /* to-sou-nervy-ty-pico.mp3 in Resources */,
+				A3865A262743AEB000773F0C /* ani-ocko-nenasadis.mp3 in Resources */,
+				A3865A202743AEB000773F0C /* okamzite-zabit-ty-kurvy.mp3 in Resources */,
+				A3865A292743AEB000773F0C /* pockej-kamo.mp3 in Resources */,
+				A3865A162743AEB000773F0C /* to-je-pico-nemozne.mp3 in Resources */,
+				A3865A1A2743AEB000773F0C /* kurva.mp3 in Resources */,
+				A3865A232743AEB000773F0C /* nebudu-to-delat.mp3 in Resources */,
+				A3865A1E2743AEB000773F0C /* kurva-do-pice-to-neni-mozne.mp3 in Resources */,
+				A3865A2A2743AEB000773F0C /* ani-za-kokot-vole.mp3 in Resources */,
+				A3865A332743AEB000773F0C /* kunda.mp3 in Resources */,
+				A3865A362743AEB000773F0C /* kunda-sem.mp3 in Resources */,
+				A38659992743AE4F00773F0C /* Assets.xcassets in Resources */,
+				A3865A2B2743AEB000773F0C /* ne-nenasadis-ho.mp3 in Resources */,
+				A3865A1B2743AEB000773F0C /* ja-to-nejdu-delat.mp3 in Resources */,
+				A3865A1C2743AEB000773F0C /* jedinou-picovinku.mp3 in Resources */,
+				A3865A2E2743AEB000773F0C /* hosi-to-je-neuveritelne.mp3 in Resources */,
+				A3865A142743AEB000773F0C /* nejvetsi-blbec-na-zemekouli.mp3 in Resources */,
+				A3865A212743AEB000773F0C /* kurva-uz.mp3 in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A3AFEC1E274450F000DDFD27 /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "mint run swiftlint --fix\nmint run swiftlint\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A386598D2743AE4F00773F0C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3AFEC1B27444FD200DDFD27 /* TrackViewModel.swift in Sources */,
+				A38659972743AE4F00773F0C /* ContentView.swift in Sources */,
+				A3865A3D2743AEE200773F0C /* Section.swift in Sources */,
+				A38659952743AE4F00773F0C /* MilujuPraciApp.swift in Sources */,
+				A3AFEC1D2744500300DDFD27 /* TrackView.swift in Sources */,
+				A3AFEC1927444FB700DDFD27 /* PlayerManager.swift in Sources */,
+				A3865A3E2743AEE200773F0C /* DataSource.swift in Sources */,
+				A3865A3C2743AEE200773F0C /* Track.swift in Sources */,
+				A3865A412743AEF800773F0C /* Color.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A386599D2743AE4F00773F0C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A386599E2743AE4F00773F0C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A38659A02743AE4F00773F0C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MilujiPraci/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = cz.ackee.enterprise.MilujiPraci;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A38659A12743AE4F00773F0C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MilujiPraci/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = cz.ackee.enterprise.MilujiPraci;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A386598C2743AE4F00773F0C /* Build configuration list for PBXProject "MilujiPraci" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A386599D2743AE4F00773F0C /* Debug */,
+				A386599E2743AE4F00773F0C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A386599F2743AE4F00773F0C /* Build configuration list for PBXNativeTarget "MilujiPraci" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A38659A02743AE4F00773F0C /* Debug */,
+				A38659A12743AE4F00773F0C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A38659892743AE4F00773F0C /* Project object */;
+}
