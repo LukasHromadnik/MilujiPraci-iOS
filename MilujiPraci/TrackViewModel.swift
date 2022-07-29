@@ -11,13 +11,15 @@ final class TrackViewModel: ObservableObject {
     @Published var progress = 0.0
 
     let track: Track
+    let color: Color
 
     private let playerManager = PlayerManager.shared
 
     // MARK: - Initialization
 
-    init(track: Track) {
+    init(track: Track, color: Color) {
         self.track = track
+        self.color = color
     }
 
     // MARK: - Public API

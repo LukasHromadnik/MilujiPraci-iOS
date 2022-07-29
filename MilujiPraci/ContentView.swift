@@ -17,37 +17,46 @@ struct ContentView: View {
             ScrollView {
                 VStack(alignment: .leading, spacing: 0) {
                     ForEach(dataSource) { section in
-                        Text(section.name)
-                            .frame(maxWidth: .infinity, alignment: .leading)
-                            .font(.headline)
-                            .padding(.horizontal)
-                            .padding(.vertical, 8)
-                            .background(
-                                Color.app.border
-                                    .overlay(
-                                        Color(.secondarySystemBackground)
-                                            .padding(.vertical, 1)
-                                    )
-                            )
-
-                        LazyVGrid(
-                            columns: [
-                                GridItem(spacing: Constants.interitemSpacing),
-                                GridItem(spacing: Constants.interitemSpacing),
-                                GridItem(spacing: Constants.interitemSpacing)
-                            ],
-                            spacing: Constants.interitemSpacing
-                        ) {
-                            ForEach(section.tracks) { track in
-                                TrackView(track: track, sectionColor: section.color)
-                            }
-                        }
-                        .padding(Constants.interitemSpacing)
+                        sectionView(section)
                     }
                 }
             }
             .navigationBarTitle("Miluju práci")
         }
+    }
+
+    @ViewBuilder
+    private func sectionView(_ section: Section) -> some View {
+        sectionTitle(section.name)
+
+        LazyVGrid(
+            columns: [
+                GridItem(spacing: Constants.interitemSpacing),
+                GridItem(spacing: Constants.interitemSpacing),
+                GridItem(spacing: Constants.interitemSpacing)
+            ],
+            spacing: Constants.interitemSpacing
+        ) {
+            ForEach(section.tracks) { track in
+                TrackView(track: track, sectionColor: section.color)
+            }
+        }
+        .padding(Constants.interitemSpacing)
+    }
+
+    private func sectionTitle(_ title: String) -> some View {
+        Text(title)
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .font(.headline)
+            .padding(.horizontal)
+            .padding(.vertical, 8)
+            .background(
+                Color.app.border
+                    .overlay(
+                        Color(.secondarySystemBackground)
+                            .padding(.vertical, 1)
+                    )
+            )
     }
 }
 

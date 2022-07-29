@@ -9,19 +9,20 @@ import SwiftUI
 
 struct TrackView: View {
     @StateObject private var viewModel: TrackViewModel
-    private let sectionColor: Color
 
     init(track: Track, sectionColor: Color) {
-        _viewModel = StateObject(wrappedValue: TrackViewModel(track: track))
-        self.sectionColor = sectionColor
+        _viewModel = StateObject(
+            wrappedValue: TrackViewModel(
+                track: track,
+                color: sectionColor
+            )
+        )
     }
 
     var body: some View {
-        Button {
-            viewModel.play()
-        } label: {
+        Button(action: viewModel.play) {
             Rectangle()
-                .fill(sectionColor)
+                .fill(viewModel.color)
                 .aspectRatio(1, contentMode: .fill)
                 .overlay(
                     GeometryReader { proxy in
